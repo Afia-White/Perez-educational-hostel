@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./stylesheets/gallery.css">
+    <!-- OFFLINE BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Serif+SC:wght@200..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicon_io/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEREZ-HOSTEL_Gallery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg hostel-navbar">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand hostel-brand" href="index.html">
+                <img class="logo" src="./images/logo.png" alt="PEREZ-HOSTEL Logo">
+                <span>PEREZ-HOSTEL</span>
+            </a>
+            <!-- Mobile Menu Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#hostelNavbar"
+                aria-controls="hostelNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="hostelNavbar">
+            <ul class="navbar-nav ms-auto">
+                <!-- HOME -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html"><i class="bi bi-house-door-fill"></i>
+                        Home
+                    </a>
+                </li>
+                <!-- ROOMS DROPDOWN -->
+                <li class="nav-item dropdown hostel-dropdown">
+                    <a class="nav-link dropdown-toggle"href="room.html"
+                        role="button"data-bs-toggle="dropdown"aria-expanded="false">
+
+                        <i class="bi bi-door-open-fill"></i>
+                        Rooms
+                    </a>
+
+                    <ul class="dropdown-menu">
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="./rooms/single_room.html">
+                            <i class="bi bi-person-fill"></i>
+                            Single Room
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="./rooms/2_n_1_room.html">
+                            <i class="bi bi-people-fill"></i>
+                            2-in-1 Room
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="./rooms/3_n_1_room.html">
+                            <i class="bi bi-people-fill"></i>
+                            3-in-1 Room
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="./rooms/premium.html">
+                            <i class="bi bi-star-fill"></i>
+                            Premium Room
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="./rooms/room_comparison.html">
+                            <i class="bi bi-bar-chart-fill"></i>
+                            Room Comparison
+                        </a>
+                    </li>
+                </li>
+            </ul>
+            <!-- FACILITIES DROPDOWN -->
+            <li class="nav-item dropdown hostel-dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" 
+                    aria-expanded="false">
+                    <i class="bi bi-building-fill"></i>
+                    Facilities
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="./facilities/library.html">
+                            <i class="bi bi-book-fill"></i>
+                            Library
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="./facilities/wifi_internet.html">
+                            <i class="bi bi-wifi"></i>
+                            Wi-Fi & Internet
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="./facilities/bathrooms&kitchen.html">
+                            <i class="bi bi-droplet-fill"></i>
+                            Bathrooms & Kitchen
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="./facilities/security.html">
+                            <i class="bi bi-shield-lock-fill"></i>
+                            Security
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="./facilities/parking.html">
+                            <i class="bi bi-car-front-fill"></i>
+                            Parking
+                        </a>
+                    </li>
+                <li>
+                    <a class="dropdown-item" href="./facilities/recreation.html">
+                        <i class="bi bi-controller"></i>
+                        Recreation Area
+                    </a>
+                </li>
+                </ul>
+            </li>
+        <!-- PRICING DROPDOWN -->
+        <li class="nav-item dropdown hostel-dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-tags-fill"></i>
+                Pricing
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li>
+                    <a class="dropdown-item" href="pricing.html#rooms">
+                        <i class="bi bi-cash-coin"></i>
+                        Room Prices
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="pricing.html#payment">
+                        <i class="bi bi-credit-card-fill"></i>
+                        Payment Plans
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="pricing.html#included">
+                        <i class="bi bi-check-circle-fill"></i>
+                        What's Included
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="pricing.html#cancellation">
+                        <i class="bi bi-arrow-counterclockwise"></i>
+                        Cancellation Policy
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!-- GALLERY -->
+            <li class="nav-item">
+                <a class="nav-link" href="gallery.html">
+                    <i class="bi bi-images"></i>
+                    Gallery
+                </a>
+            </li>
+            <!-- CONTACT -->
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">
+                        <i class="bi bi-telephone-fill"></i>
+                        Contact
+                    </a>
+                </li>
+                <!-- BOOK NOW -->
+                <li class="nav-item ms-lg-3">
+                    <a class="btn booking-btn" href="booking.html">
+                        <i class="bi bi-calendar-check-fill"></i>
+                        Book Now
+                    </a>
+                </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+   <section class="gallery">
+    <div class="gallery-item">
+    <img src="./images/kitchen1.JPEG" alt="Kitchen">
+    <div class="caption">Dining Room</div>
+    </div>
+
+    <div class="gallery-item">
+    <img src="./images/hostel.JPG" alt="The Hostel">
+    <div class="caption">The Hostel</div>
+    </div>
+    <div class="gallery-item">
+    <img src="./images/stairs.PNG" alt="Stairs">
+    <div class="caption">Stairs</div>
+    </div>
+    <div class="gallery-item">
+    <img src="./images/corridor.PNG" alt="Corridor">
+    <div class="caption">Corridor</div>
+    </div>
+  </section>
+    <section class="gallery">
+    <div class="gallery-item">
+    <img src="./images/2things.PNG" alt="Room">
+    <div class="caption">2-in-1-Room</div>
+    </div>
+    <div class="gallery-item">
+    <img src="./images/kitchen.PNG" alt="Kitchen">
+    <div class="caption">Kitchen</div>
+    </div>
+    <div class="gallery-item">
+    <img src="./images/bathroom.PNG" alt="Bathroom">
+    <div class="caption">Bathroom</div>
+    </div>
+    <div class="gallery-item">
+    <img src="./images/library.jpg" alt="Library">
+    <div class="caption">Library</div>
+    </div>
+  </section>
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- My JavaScript -->
+    <script src="javascript/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

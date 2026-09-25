@@ -1,5 +1,3 @@
-
-
 /* =========================================
    PEREZ HOSTEL NAVBAR
 ========================================= */
@@ -24,6 +22,7 @@
 
 .logo {
     width: 55px;
+    /* border-radius:50px; */
     height: 55px;
     object-fit: contain;
 }
@@ -163,14 +162,310 @@
     filter: brightness(0) invert(1);
 }
 
+/* =========================================
+   HOSTEL HERO SECTION
+========================================= */
+
+.hostel-hero {
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #eef8ff
+    );
+
+    padding: 60px 0;
+}
+
 
 /* =========================================
-   MOBILE RESPONSIVENESS
+   TWO SMALL IMAGE BOXES
+========================================= */
+
+.small-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.small-image-box {
+    width: 100%;
+    height: 230px;
+
+    background-color: white;
+
+    padding: 8px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+}
+
+
+.small-image-box img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+
+    transition: 0.4s ease;
+}
+
+
+.small-image-box:hover img {
+    transform: scale(1.05);
+}
+
+
+
+/* =========================================
+   LARGE BOOTSTRAP CAROUSEL
+========================================= */
+
+.hostel-carousel {
+    width: 100%;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.18);
+
+    background-color: #0b3d5c;
+}
+
+
+/* =========================================
+   CAROUSEL IMAGE
+========================================= */
+
+.hostel-carousel .carousel-item {
+    height: 480px;
+}
+
+
+.hostel-carousel .carousel-item img {
+    width: 100%;
+    height: 480px;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   DARK OVERLAY
+========================================= */
+
+.hostel-carousel .carousel-item::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.05)
+        );
+}
+
+
+/* =========================================
+   CAROUSEL TEXT
+========================================= */
+
+.hostel-carousel .carousel-caption {
+    z-index: 2;
+
+    bottom: 80px;
+
+    left: 10%;
+    right: 10%;
+
+    text-align: left;
+}
+
+
+.hostel-carousel .carousel-caption h1 {
+    font-size: 42px;
+
+    font-weight: 800;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        2px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+.hostel-carousel .carousel-caption p {
+    font-size: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+
+/* =========================================
+   HERO BUTTON
+========================================= */
+
+.hero-btn {
+    display: inline-block;
+
+    background-color: #ffd166;
+
+    color: #0b3d5c;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    transition: 0.3s ease;
+}
+
+
+.hero-btn:hover {
+    background-color: white;
+
+    color: #0b3d5c;
+
+    transform: translateY(-3px);
+}
+
+
+
+/* =========================================
+   CAROUSEL INDICATORS
+========================================= */
+
+.hostel-carousel .carousel-indicators button {
+    width: 35px;
+
+    height: 5px;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   CAROUSEL ARROWS
+========================================= */
+
+.hostel-carousel .carousel-control-prev,
+.hostel-carousel .carousel-control-next {
+    width: 8%;
+}
+
+  .guesthouse-footer {
+  /* width: 100vw; */
+  background: #222; 
+  color: #eee;
+  margin: 0 !important;
+  /* padding: 40px 20px 10px; */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin:0;
+}
+
+.footer-section {
+  flex: 1 1 220px;
+  margin: 15px;
+}
+
+.footer-section h4 {
+  margin-bottom: 15px;
+  color: #f4d03f; /* golden accent */
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-section > ul li{
+  list-style:none;
+}
+
+.footer-section a {
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+  }
+
+
+
+/* =========================================
+   TABLET
 ========================================= */
 
 @media (max-width: 991px) {
 
-    .hostel-navbar {
+    .hostel-hero {
+        padding: 40px 0;
+    }
+
+
+    .small-images {
+        flex-direction: row;
+    }
+
+
+    .small-image-box {
+        height: 200px;
+    }
+
+
+    .hostel-carousel .carousel-item {
+        height: 400px;
+    }
+
+
+    .hostel-carousel .carousel-item img {
+        height: 400px;
+    }
+
+
+    .hostel-carousel .carousel-caption h1 {
+        font-size: 32px;
+    }
+
+        .hostel-navbar {
         padding: 10px 0;
     }
 
@@ -206,6 +501,68 @@
         display: inline-block;
         margin-top: 8px;
         margin-bottom: 8px;
+    }
+
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+    .hostel-hero {
+        padding: 25px 0;
+    }
+
+
+    .small-images {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .small-image-box {
+        height: 180px;
+    }
+
+
+    .hostel-carousel .carousel-item {
+        height: 350px;
+    }
+
+
+    .hostel-carousel .carousel-item img {
+        height: 350px;
+    }
+
+
+    .hostel-carousel .carousel-caption {
+        bottom: 55px;
+
+        left: 12%;
+
+        right: 12%;
+    }
+
+
+    .hostel-carousel .carousel-caption h1 {
+        font-size: 25px;
+    }
+
+
+    .hostel-carousel .carousel-caption p {
+        font-size: 15px;
+    }
+
+
+    .hero-btn {
+        padding: 9px 18px;
+
+        font-size: 14px;
     }
 
 }
