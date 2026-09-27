@@ -29,3 +29,43 @@ featuredCards.forEach(function(card) {
     cardObserver.observe(card);
 
 });
+
+/* =========================================
+   FACILITIES SCROLL ANIMATION
+========================================= */
+
+const facilityCards =
+    document.querySelectorAll(".facility-card");
+
+
+const facilityCardObserver =
+    new IntersectionObserver(
+
+        function(entries) {
+
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add(
+                        "facility-visible"
+                    );
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.12
+        }
+
+    );
+
+
+facilityCards.forEach(function(card) {
+
+    facilityCardObserver.observe(card);
+
+});

@@ -1224,7 +1224,310 @@
     transform: translateX(5px);
 }
 
+/* facilities */
+:root {
+  --accent: #ff6b35;
+  --accent-dark: #e85a2a;
+  --text-dark: #1a1a2e;
+  --text-muted: #6b7280;
+  --radius: 20px;
+}
 
+/* ---------- Section ---------- */
+.fac-img {
+  padding: 110px 20px;
+  background: #ffffff;
+  font-family: 'Poppins', system-ui, sans-serif;
+  overflow: hidden;
+}
+
+.fac-img__container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+.fac-img__header {
+  text-align: center;
+  max-width: 660px;
+  margin: 0 auto 60px;
+}
+
+.fac-img__eyebrow {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.fac-img__title {
+  font-size: clamp(1.7rem, 3.6vw, 2.3rem);
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.3;
+  margin-bottom: 14px;
+}
+
+.fac-img__subtitle {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ---------- Bento Grid ---------- */
+.fac-img__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 260px;
+  gap: 20px;
+}
+
+.fac-card--lg   { grid-column: span 2; grid-row: span 2; }
+.fac-card--wide { grid-column: span 2; }
+
+/* ---------- Card ---------- */
+.fac-card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  isolation: isolate;
+
+  /* reveal */
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease;
+  will-change: transform, opacity;
+}
+
+.fac-card.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.fac-card:hover {
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.22);
+  transform: translateY(-6px);
+}
+
+/* ---------- Image ---------- */
+.fac-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.fac-card:hover img {
+  transform: scale(1.12);
+}
+
+/* ---------- Overlay ---------- */
+.fac-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 20, 0.88) 0%,
+    rgba(10, 10, 20, 0.55) 40%,
+    rgba(10, 10, 20, 0.15) 70%,
+    transparent 100%
+  );
+  transition: background 0.5s ease;
+  z-index: 1;
+}
+
+.fac-card:hover .fac-card__overlay {
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 20, 0.94) 0%,
+    rgba(10, 10, 20, 0.72) 45%,
+    rgba(10, 10, 20, 0.3) 75%,
+    rgba(10, 10, 20, 0.05) 100%
+  );
+}
+
+/* ---------- Icon Badge ---------- */
+.fac-card__icon {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  font-size: 1.35rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  z-index: 2;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+              background 0.35s ease;
+  animation: floatIcon 5s ease-in-out infinite;
+}
+
+.fac-card--lg .fac-card__icon,
+.fac-card--wide .fac-card__icon {
+  width: 54px;
+  height: 54px;
+  font-size: 1.5rem;
+}
+
+.fac-card:hover .fac-card__icon {
+  background: var(--accent);
+  border-color: transparent;
+  transform: scale(1.1) rotate(-6deg);
+  animation-play-state: paused;
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-5px); }
+}
+
+/* ---------- Content ---------- */
+.fac-card__content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 22px 22px 24px;
+  color: #fff;
+  z-index: 2;
+  transform: translateY(0);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fac-card__content h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+  letter-spacing: 0.2px;
+}
+
+.fac-card--lg .fac-card__content h3,
+.fac-card--wide .fac-card__content h3 {
+  font-size: 1.35rem;
+}
+
+.fac-card__content p {
+  font-size: 0.87rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+
+  /* hidden by default — revealed on hover */
+  opacity: 0;
+  max-height: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.45s ease 0.05s,
+    max-height 0.5s ease,
+    transform 0.5s ease;
+  overflow: hidden;
+}
+
+.fac-card:hover .fac-card__content p {
+  opacity: 1;
+  max-height: 100px;
+  transform: translateY(0);
+}
+
+/* accent underline that grows on hover */
+.fac-card__content h3::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  margin-top: 8px;
+  background: var(--accent);
+  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fac-card:hover .fac-card__content h3::after {
+  width: 42px;
+}
+
+/* ---------- Section CTA ---------- */
+.fac-img__cta {
+  text-align: center;
+  margin-top: 55px;
+}
+
+.fac-img__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 34px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 26px rgba(255, 107, 53, 0.35);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fac-img__cta-btn span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.fac-img__cta-btn:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(255, 107, 53, 0.5);
+}
+
+.fac-img__cta-btn:hover span {
+  transform: translateX(5px);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .fac-img__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 240px;
+  }
+  .fac-card--lg { grid-column: span 2; grid-row: span 2; }
+  .fac-card--wide { grid-column: span 2; }
+}
+
+@media (max-width: 640px) {
+  .fac-img { padding: 80px 16px; }
+  .fac-img__grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+  }
+  .fac-card--lg,
+  .fac-card--wide {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .fac-card__content p {
+    opacity: 1;
+    max-height: 100px;
+    transform: translateY(0);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .fac-card__icon { animation: none; }
+  .fac-card { opacity: 1; transform: none; transition: none; }
+}
 /* =========================================
    TABLET
 ========================================= */
