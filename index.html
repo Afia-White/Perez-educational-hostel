@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PEREZ-HOSTEL</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- OFFLINE BOOTSTRAP CSS -->
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <!-- BOOTSTRAP ICONS -->
@@ -24,271 +34,712 @@
 </head>
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg hostel-navbar">
-        <div class="container">
-            <!-- Logo -->
-            <a class="navbar-brand hostel-brand" href="index.html">
-                <img class="logo" src="./images/logo.png" alt="PEREZ-HOSTEL Logo">
-                <span>PEREZ-HOSTEL</span>
-            </a>
-            <!-- Mobile Menu Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#hostelNavbar"
-                aria-controls="hostelNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Navigation Links -->
-        <div class="collapse navbar-collapse" id="hostelNavbar">
+    <!-- =========================================
+     PEREZ-HOSTEL NAVBAR
+========================================= -->
+
+<nav class="navbar navbar-expand-lg hostel-navbar">
+
+    <div class="container">
+
+        <!-- LOGO + HOSTEL NAME -->
+        <a class="navbar-brand hostel-brand" href="index.html">
+
+            <img
+                class="logo"
+                src="./images/logo.png"
+                alt="PEREZ-HOSTEL Logo">
+
+            <span>PEREZ-HOSTEL</span>
+
+        </a>
+
+
+        <!-- =================================
+             MOBILE HAMBURGER
+        ================================== -->
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#hostelNavbar"
+            aria-controls="hostelNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- =================================
+             NAVIGATION
+        ================================== -->
+
+        <div
+            class="collapse navbar-collapse"
+            id="hostelNavbar">
+
             <ul class="navbar-nav ms-auto">
+
+
                 <!-- HOME -->
                 <li class="nav-item">
-                    <a class="nav-link active" href="index.html"><i class="bi bi-house-door-fill"></i>
+
+                    <a
+                        class="nav-link active"
+                        href="index.html">
+
+                        <i class="bi bi-house-door-fill"></i>
                         Home
+
                     </a>
+
                 </li>
-                <!-- ROOMS DROPDOWN -->
+
+
+                <!-- =================================
+                     ROOMS DROPDOWN
+                ================================== -->
+
                 <li class="nav-item dropdown hostel-dropdown">
-                    <a class="nav-link dropdown-toggle"href="room.html"
-                        role="button"data-bs-toggle="dropdown"aria-expanded="false">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
 
                         <i class="bi bi-door-open-fill"></i>
                         Rooms
+
                     </a>
+
 
                     <ul class="dropdown-menu">
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="./rooms/single_room.html">
-                            <i class="bi bi-person-fill"></i>
-                            Single Room
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="./rooms/2_n_1_room.html">
-                            <i class="bi bi-people-fill"></i>
-                            2-in-1 Room
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="./rooms/3_n_1_room.html">
-                            <i class="bi bi-people-fill"></i>
-                            3-in-1 Room
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="./rooms/premium.html">
-                            <i class="bi bi-star-fill"></i>
-                            Premium Room
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="./rooms/room_comparison.html">
-                            <i class="bi bi-bar-chart-fill"></i>
-                            Room Comparison
-                        </a>
-                    </li>
-                </li>
-            </ul>
-            <!-- FACILITIES DROPDOWN -->
-            <li class="nav-item dropdown hostel-dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" 
-                    aria-expanded="false">
-                    <i class="bi bi-building-fill"></i>
-                    Facilities
-                </a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="./facilities/library.html">
-                            <i class="bi bi-book-fill"></i>
-                            Library
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="./facilities/wifi_internet.html">
-                            <i class="bi bi-wifi"></i>
-                            Wi-Fi & Internet
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="./facilities/bathrooms&kitchen.html">
-                            <i class="bi bi-droplet-fill"></i>
-                            Bathrooms & Kitchen
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="./facilities/security.html">
-                            <i class="bi bi-shield-lock-fill"></i>
-                            Security
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="./facilities/parking.html">
-                            <i class="bi bi-car-front-fill"></i>
-                            Parking
-                        </a>
-                    </li>
-                <li>
-                    <a class="dropdown-item" href="./facilities/recreation.html">
-                        <i class="bi bi-controller"></i>
-                        Recreation Area
-                    </a>
-                </li>
-                </ul>
-            </li>
-        <!-- PRICING DROPDOWN -->
-        <li class="nav-item dropdown hostel-dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-tags-fill"></i>
-                Pricing
-            </a>
-            <ul class="dropdown-menu">
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
-                <li>
-                    <a class="dropdown-item" href="pricing.html#rooms">
-                        <i class="bi bi-cash-coin"></i>
-                        Room Prices
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="pricing.html#payment">
-                        <i class="bi bi-credit-card-fill"></i>
-                        Payment Plans
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="pricing.html#included">
-                        <i class="bi bi-check-circle-fill"></i>
-                        What's Included
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="pricing.html#cancellation">
-                        <i class="bi bi-arrow-counterclockwise"></i>
-                        Cancellation Policy
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <!-- GALLERY -->
-            <li class="nav-item">
-                <a class="nav-link" href="gallery.html">
-                    <i class="bi bi-images"></i>
-                    Gallery
-                </a>
-            </li>
-            <!-- CONTACT -->
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">
-                        <i class="bi bi-telephone-fill"></i>
-                        Contact
-                    </a>
-                </li>
-                <!-- BOOK NOW -->
-                <li class="nav-item ms-lg-3">
-                    <a class="btn booking-btn" href="booking.html">
-                        <i class="bi bi-calendar-check-fill"></i>
-                        Book Now
-                    </a>
+
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="./rooms/single_room.html">
+
+                                <i class="bi bi-person-fill"></i>
+                                Single Room
+
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="./rooms/2_n_1_room.html">
+
+                                <i class="bi bi-people-fill"></i>
+                                2-in-1 Room
+
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="./rooms/3_n_1_room.html">
+
+                                <i class="bi bi-people-fill"></i>
+                                3-in-1 Room
+
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="./rooms/premium.html">
+
+                                <i class="bi bi-star-fill"></i>
+                                Premium Room
+
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="./rooms/room_comparison.html">
+
+                                <i class="bi bi-bar-chart-fill"></i>
+                                Room Comparison
+
+                            </a>
+                        </li>
+
+
+                    </ul>
+
                 </li>
 
-                </ul>
-            </div>
+
+                <!-- =================================
+                     FACILITIES DROPDOWN
+                ================================== -->
+
+                <li class="nav-item dropdown hostel-dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        <i class="bi bi-building-fill"></i>
+                        Facilities
+
+                    </a>
+
+
+                    <ul class="dropdown-menu">
+
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="./facilities/library.html">
+
+                                <i class="bi bi-book-fill"></i>
+                                Library
+
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="./facilities/wifi_internet.html">
+
+                                <i class="bi bi-wifi"></i>
+                                Wi-Fi & Internet
+
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="./facilities/bathrooms&kitchen.html">
+
+                                <i class="bi bi-droplet-fill"></i>
+                                Bathrooms & Kitchen
+
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="./facilities/security.html">
+
+                                <i class="bi bi-shield-lock-fill"></i>
+                                Security
+
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="./facilities/parking.html">
+
+                                <i class="bi bi-car-front-fill"></i>
+                                Parking
+
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="./facilities/recreation.html">
+
+                                <i class="bi bi-controller"></i>
+                                Recreation Area
+
+                            </a>
+                        </li>
+
+
+                    </ul>
+
+                </li>
+
+
+                <!-- =================================
+                     PRICING DROPDOWN
+                ================================== -->
+
+                <li class="nav-item dropdown hostel-dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        <i class="bi bi-tags-fill"></i>
+                        Pricing
+
+                    </a>
+
+
+                    <ul class="dropdown-menu">
+
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="pricing.html#rooms">
+
+                                <i class="bi bi-cash-coin"></i>
+                                Room Prices
+
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="pricing.html#payment">
+
+                                <i class="bi bi-credit-card-fill"></i>
+                                Payment Plans
+
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="pricing.html#included">
+
+                                <i class="bi bi-check-circle-fill"></i>
+                                What's Included
+
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="pricing.html#cancellation">
+
+                                <i class="bi bi-arrow-counterclockwise"></i>
+                                Cancellation Policy
+
+                            </a>
+                        </li>
+
+
+                    </ul>
+
+                </li>
+
+
+                <!-- GALLERY -->
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="gallery.html">
+
+                        <i class="bi bi-images"></i>
+                        Gallery
+
+                    </a>
+
+                </li>
+
+
+                <!-- CONTACT -->
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="contact.html">
+
+                        <i class="bi bi-telephone-fill"></i>
+                        Contact
+
+                    </a>
+
+                </li>
+
+
+                <!-- BOOK NOW -->
+                <li class="nav-item ms-lg-3">
+
+                    <a
+                        class="btn booking-btn"
+                        href="booking.html">
+
+                        <i class="bi bi-calendar-check-fill"></i>
+                        Book Now
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
         </div>
-    </nav>
+
+    </div>
+
+</nav>
     <!-- =========================================
-     HERO SECTION
+     PEREZ-HOSTEL HERO SECTION
 ========================================= -->
 
 <section class="hostel-hero">
+
     <div class="container">
+
         <div class="row align-items-center g-4">
+
             <!-- =================================
-                 LEFT SIDE - TWO SMALL IMAGES
+                 LEFT SIDE - FIXED IMAGES
             ================================== -->
+
             <div class="col-lg-4">
+
                 <div class="small-images">
-                    <!-- TOP IMAGE -->
+
+                    <!-- FIXED IMAGE 1 -->
                     <div class="small-image-box">
                         <img src="./images/hostel.JPG"
-                             alt="Perez Hostel Building">
+                             alt="Perez-Hostel Building">
                     </div>
-                    <!-- BOTTOM IMAGE -->
+
+                    <!-- FIXED IMAGE 2 -->
                     <div class="small-image-box">
                         <img src="./images/hostel.JPG"
-                             alt="Perez Hostel Room">
+                             alt="Perez-Hostel Building">
                     </div>
+
                 </div>
+
             </div>
-             <!-- =================================
-                 RIGHT SIDE - BOOTSTRAP CAROUSEL
+
+
+            <!-- =================================
+                 RIGHT SIDE - MOVING BOOTSTRAP
+                 CAROUSEL ONLY
             ================================== -->
-            <div class="col-lg-8">
-                <div id="hostelCarousel" class="carousel slide hostel-carousel" data-bs-ride="carousel" data-bs-interval="4000">
-                <!-- CAROUSEL INDICATORS -->
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#hostelCarousel" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Slide 1">
-                        </button>
-                        <button type="button"  data-bs-target="#hostelCarousel"
-                            data-bs-slide-to="1" aria-label="Slide 2">
-                        </button>
-                        <button type="button" data-bs-target="#hostelCarousel"
-                            data-bs-slide-to="2"  aria-label="Slide 3">
-                        </button>
-                    </div>
-                    <!-- CAROUSEL IMAGES -->
-                    <div class="carousel-inner">
-                        <!-- SLIDE 1 -->
-                        <div class="carousel-item active">
-                            <img src="./images/hostel.JPG" class="d-blockalt"alt="Perez Hostel">
-                        </div>
-                        <div class="carousel-caption">
-                            <h1>Welcome to PEREZ-HOSTEL</h1>
-                            <p>Your comfort, our priority.</p>
-                            <a href="rooms.html" class="hero-btn"> Explore Rooms </a>
-                        </div>
-                    </div>
-                    <!-- SLIDE 2 -->
-                    <div class="carousel-item">
-                        <img src="./images/2people.PNG" class="d-block w-100" alt="Comfortable Hostel Room">
-                        <div class="carousel-caption">
-                            <h1>Comfortable Student Rooms</h1>
-                            <p> A peaceful place to study, relax and live.</p>
-                            <a href="rooms.html" class="hero-btn"> View Rooms</a>
-                        </div>
-                    </div>
-                    <!-- SLIDE 3 -->
-                    <div class="carousel-item">
-                        <img src="./images/kitchen.PNG" class="d-block w-100" alt="Perez Hostel Facilities">
-                        <div class="carousel-caption">
-                            <h1>Everything You Need</h1>
-                            <p>Enjoy the great food in a great kitchen of the hostel. </p>
-                            <a href="facilities.html" class="hero-btn">
-                                Explore Facilities
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- PREVIOUS BUTTON -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#hostelCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden"> Previous </span>
-                </button>
-                <!-- NEXT BUTTON -->
-                <button class="carousel-control-next" type="button" data-bs-target="#hostelCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"> </span>
-                    <span class="visually-hidden"> Next</span>
-                </button>
-            </div>
+
+            <!-- =================================
+        RIGHT SIDE - HOSTEL VIDEO
+    ================================= -->
+
+    <div class="col-lg-8">
+
+        <div class="hostel-video-box">
+
+            <video 
+                class="hostel-video"
+                autoplay
+                muted
+            loop
+            playsinline>
+
+            <source src="./video/video1.mp4" type="video/mp4">
+
+            Your browser does not support the video tag.
+
+        </video>
+
+
+        <!-- VIDEO TEXT -->
+
+        <div class="video-content">
+
+            <h1>WELCOME TO PEREZ-HOSTEL</h1>
+
+            <p>
+                Your Comfort, Our Priority
+            </p>
+
+            <a href="rooms.html" class="hero-btn">
+                Explore Rooms
+            </a>
+
         </div>
-    </div></div>
+
+    </div>
+
+</div>
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================
+     ABOUT PEREZ-HOSTEL
+========================================= -->
+
+<section class="hostel-intro">
+
+    <div class="container">
+
+        <div class="intro-content">
+
+            <span class="intro-label">
+                ABOUT PEREZ HOSTEL
+            </span>
+
+            <h2>
+                A Comfortable Place to
+                <span>Live, Learn & Grow</span>
+            </h2>
+
+            <div class="intro-line"></div>
+
+            <p>
+                Perez Hostel provides students with comfortable,
+                secure and convenient accommodation in a peaceful
+                and welcoming environment. Our goal is to create
+                a home away from home where students can focus
+                on their studies while enjoying a positive hostel
+                experience.
+            </p>
+
+            <div class="intro-features">
+
+                <div class="intro-feature">
+                    <i class="bi bi-house-heart-fill"></i>
+                    <span>Comfortable Accommodation</span>
+                </div>
+
+                <div class="intro-feature">
+                    <i class="bi bi-shield-check"></i>
+                    <span>Safe & Secure Environment</span>
+                </div>
+
+                <div class="intro-feature">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>Convenient Location</span>
+                </div>
+
+            </div>
+
+            <a href="about.html" class="intro-btn">
+                Learn More About Us
+                <i class="bi bi-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================
+     FEATURED SECTION
+========================================= -->
+
+<section class="featured-section">
+
+    <div class="container">
+
+        <!-- SECTION HEADING -->
+
+        <div class="featured-heading">
+
+            <span class="featured-label">
+                WHY PEREZ HOSTEL
+            </span>
+
+            <h2>
+                Featured <span>Highlights</span>
+            </h2>
+
+            <div class="featured-line"></div>
+
+            <p>
+                Discover the comfort, convenience and security
+                that make Perez Hostel a great place for students
+                to live, study and enjoy hostel life.
+            </p>
+
+        </div>
+
+
+        <!-- =================================
+             FEATURED CARDS
+        ================================== -->
+
+        <div class="row g-4">
+
+
+            <!-- CARD 1 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="featured-card reveal-card">
+
+                    <div class="featured-image">
+
+                        <img
+                            src="./images/hostel.JPG"
+                            alt="Comfortable Perez Hostel accommodation">
+
+                        <div class="featured-icon">
+                            <i class="bi bi-house-heart-fill"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="featured-content">
+
+                        <span class="featured-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Comfortable Rooms
+                        </h3>
+
+                        <p>
+                            Enjoy thoughtfully designed rooms that
+                            provide a comfortable environment for
+                            studying, resting and everyday student life.
+                        </p>
+
+                        <a href="room.html" class="featured-link">
+                            Explore Rooms
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="featured-card reveal-card">
+
+                    <div class="featured-image">
+
+                        <img
+                            src="./images/2people.PNG"
+                            alt="Perez Hostel student accommodation">
+
+                        <div class="featured-icon">
+                            <i class="bi bi-wifi"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="featured-content">
+
+                        <span class="featured-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Connected Living
+                        </h3>
+
+                        <p>
+                            Stay connected with reliable internet
+                            access, convenient facilities and spaces
+                            designed to support your academic lifestyle.
+                        </p>
+
+                        <a href="facilities.html" class="featured-link">
+                            View Facilities
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="featured-card reveal-card">
+
+                    <div class="featured-image">
+
+                        <img
+                            src="./images/kitchen.PNG"
+                            alt="Perez Hostel facilities">
+
+                        <div class="featured-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="featured-content">
+
+                        <span class="featured-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Safe & Convenient
+                        </h3>
+
+                        <p>
+                            Experience a welcoming environment with
+                            essential facilities and security designed
+                            to give students peace of mind.
+                        </p>
+
+                        <a href="facilities.html" class="featured-link">
+                            Discover More
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
 </section>
 <footer class="guesthouse-footer">
     <div class="footer-container">
@@ -473,11 +924,11 @@
     <p>&copy; 2026 Perez-Hostel. All Rights Reserved.</p>
   </div>
 </footer>
-<!-- Bootstrap JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap JavaScript
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
 
     <!-- My JavaScript -->
-    <script src="javascript/script.js"></script>
+    <script src="./script/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

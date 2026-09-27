@@ -2,166 +2,6 @@
    PEREZ HOSTEL NAVBAR
 ========================================= */
 
-.hostel-navbar {
-    background-color: #0b3d5c;
-    padding: 12px 0;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-}
-
-
-/* =========================================
-   LOGO AND HOSTEL NAME
-========================================= */
-
-.hostel-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-}
-
-.logo {
-    width: 55px;
-    /* border-radius:50px; */
-    height: 55px;
-    object-fit: contain;
-}
-
-.hostel-brand span {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.hostel-brand:hover span {
-    color: #ffd166;
-}
-
-
-/* =========================================
-   MAIN NAVIGATION LINKS
-========================================= */
-
-.hostel-navbar .nav-link {
-    color: white;
-    font-size: 15px;
-    font-weight: 500;
-    padding: 10px 12px;
-    margin: 0 2px;
-    transition: 0.3s ease;
-}
-
-.hostel-navbar .nav-link:hover {
-    color: #ffd166;
-}
-
-.hostel-navbar .nav-link.active {
-    color: #ffd166;
-}
-
-
-/* =========================================
-   DROPDOWN MENU
-========================================= */
-
-.hostel-navbar .dropdown-menu {
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 8px 0;
-    min-width: 220px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
-}
-
-
-/* =========================================
-   SHOW DROPDOWN ON HOVER
-========================================= */
-
-@media (min-width: 992px) {
-
-    .hostel-dropdown:hover .dropdown-menu {
-        display: block;
-        margin-top: 0;
-    }
-
-    .hostel-dropdown:hover .dropdown-toggle {
-        color: #ffd166;
-    }
-
-}
-
-
-/* =========================================
-   DROPDOWN ITEMS
-========================================= */
-
-.hostel-navbar .dropdown-item {
-    color: #0b3d5c;
-    font-size: 14px;
-    padding: 10px 18px;
-    transition: 0.25s ease;
-}
-
-.hostel-navbar .dropdown-item i {
-    margin-right: 8px;
-}
-
-.hostel-navbar .dropdown-item:hover {
-    background-color: #0b3d5c;
-    color: white;
-    padding-left: 22px;
-}
-
-
-/* =========================================
-   DROPDOWN DIVIDER
-========================================= */
-
-.hostel-navbar .dropdown-divider {
-    margin: 6px 12px;
-}
-
-
-/* =========================================
-   BOOK NOW BUTTON
-========================================= */
-
-.booking-btn {
-    background-color: #ffd166;
-    color: #0b3d5c;
-    font-weight: bold;
-    border-radius: 25px;
-    padding: 10px 18px;
-    border: none;
-    transition: 0.3s ease;
-}
-
-.booking-btn:hover {
-    background-color: white;
-    color: #0b3d5c;
-    transform: translateY(-2px);
-}
-
-
-/* =========================================
-   MOBILE MENU BUTTON
-========================================= */
-
-.navbar-toggler {
-    border: 2px solid white;
-    padding: 7px 10px;
-}
-
-.navbar-toggler:focus {
-    box-shadow: none;
-}
-
-.navbar-toggler-icon {
-    filter: brightness(0) invert(1);
-}
-
 /* =========================================
    HOSTEL HERO SECTION
 ========================================= */
@@ -183,7 +23,7 @@
 
 .small-images {
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     gap: 20px;
 }
 
@@ -191,24 +31,17 @@
 .small-image-box {
     width: 100%;
     height: 230px;
-
     background-color: white;
-
     padding: 8px;
-
     border-radius: 20px;
-
     box-shadow:
         0 8px 25px rgba(0, 0, 0, 0.15);
-
     overflow: hidden;
 }
-
 
 .small-image-box img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
 
     border-radius: 14px;
@@ -228,11 +61,11 @@
 ========================================= */
 
 .hostel-carousel {
-    width: 100%;
+    width: 90%;
 
-    border-radius: 25px;
+    border-radius: 30px;
 
-    overflow: hidden;
+    overflow:hidden;
 
     box-shadow:
         0 10px 35px rgba(0, 0, 0, 0.18);
@@ -246,13 +79,12 @@
 ========================================= */
 
 .hostel-carousel .carousel-item {
-    height: 480px;
+    height:440px;
 }
-
 
 .hostel-carousel .carousel-item img {
     width: 100%;
-    height: 480px;
+    height:440px;
 
     object-fit: cover;
 }
@@ -265,9 +97,9 @@
 .hostel-carousel .carousel-item::after {
     content: "";
 
-    position: absolute;
+    position:absolute;
 
-    top: 0;
+    top:0;
     left: 0;
 
     width: 100%;
@@ -289,7 +121,7 @@
 .hostel-carousel .carousel-caption {
     z-index: 2;
 
-    bottom: 80px;
+    bottom:50px;
 
     left: 10%;
     right: 10%;
@@ -342,9 +174,9 @@
 
 
 .hero-btn:hover {
-    background-color: white;
+    background-color: #0b3d5c;
 
-    color: #0b3d5c;
+    color: #ffd166;
 
     transform: translateY(-3px);
 }
@@ -373,9 +205,12 @@
     width: 8%;
 }
 
+/* ===============================
+    FOOTER
+=========================================*/
   .guesthouse-footer {
   /* width: 100vw; */
-  background: #222; 
+  background:#0b3d5c; 
   color: #eee;
   margin: 0 !important;
   /* padding: 40px 20px 10px; */
@@ -396,7 +231,7 @@
 
 .footer-section h4 {
   margin-bottom: 15px;
-  color: #f4d03f; /* golden accent */
+  color:white; /* golden accent */
 }
 
 .footer-section p,
@@ -428,7 +263,1363 @@
     padding-top: 10px;
   }
 
+/* =========================================
+   PEREZ-HOSTEL HERO
+========================================= */
 
+.hostel-hero {
+    min-height: calc(100vh - 80px);
+
+    padding: 30px 0;
+
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #eef8ff
+    );
+}
+
+
+/* =========================================
+   SMALL FIXED IMAGES
+========================================= */
+
+.small-images {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+
+.small-image-box {
+    width: 100%;
+    height: 190px;
+
+    padding: 7px;
+
+    background-color: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.small-image-box img {
+    width: 100%;
+    height:190px;
+
+    object-fit: cover;
+
+    border-radius: 13px;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+
+.small-image-box:hover img {
+    transform: scale(1.05);
+}
+
+/* =========================================
+   LARGE BOOTSTRAP CAROUSEL
+========================================= */
+
+.hostel-carousel {
+    width: 100%;
+    height: 400px;
+
+    border-radius: 22px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+}
+
+
+.hostel-carousel .carousel-inner {
+    height: 100%;
+}
+
+
+.hostel-carousel .carousel-item {
+    height: 400px;
+    position: relative;
+}
+
+
+.hostel-carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* =========================================
+   DARK IMAGE OVERLAY
+========================================= */
+
+.hostel-carousel .carousel-item::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.70),
+        rgba(0, 0, 0, 0.05)
+    );
+}
+
+
+/* =========================================
+   CAROUSEL TEXT
+========================================= */
+
+.hostel-carousel .carousel-caption {
+    z-index: 2;
+
+    left: 10%;
+    right: 10%;
+
+    bottom: 70px;
+
+    text-align: left;
+}
+
+
+.hostel-carousel .carousel-caption h1 {
+    font-size: 40px;
+
+    font-weight: 800;
+
+    margin-bottom: 12px;
+
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+.hostel-carousel .carousel-caption p {
+    font-size: 20px;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================================
+   HERO BUTTON
+========================================= */
+
+.hero-btn {
+    display: inline-block;
+
+    padding: 11px 24px;
+
+    background-color: #ffd166;
+
+    color: #0b3d5c;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 30px;
+
+    transition: 0.3s ease;
+}
+
+
+.hero-btn:hover {
+    background-color: white;
+
+    color: #0b3d5c;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   CAROUSEL INDICATORS
+========================================= */
+
+.hostel-carousel .carousel-indicators {
+    z-index: 5;
+}
+
+
+.hostel-carousel .carousel-indicators button {
+    width: 30px;
+    height: 5px;
+
+    border-radius: 10px;
+}
+
+/* =========================================
+   HOSTEL VIDEO BOX
+========================================= */
+
+.hostel-video-box {
+    width: 100%;
+    height: 350px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background-color: #0b3d5c;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+}
+
+
+/* VIDEO */
+
+.hostel-video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* DARK OVERLAY */
+
+.hostel-video-box::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.70),
+        rgba(0, 0, 0, 0.05)
+    );
+
+    pointer-events: none;
+}
+
+
+/* TEXT ON VIDEO */
+
+.video-content {
+    position: absolute;
+
+    z-index: 2;
+
+    left: 10%;
+    right: 10%;
+    bottom: 55px;
+
+    color: white;
+}
+
+
+.video-content h1 {
+    font-size: 40px;
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+.video-content p {
+    font-size: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+/* BUTTON */
+
+.video-content .hero-btn {
+    display: inline-block;
+
+    padding: 11px 24px;
+
+    background-color: #ffd166;
+
+    color: #0b3d5c;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 30px;
+
+    transition: 0.3s ease;
+}
+
+
+.video-content .hero-btn:hover {
+    background-color: white;
+
+    color: #0b3d5c;
+
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   PEREZ-HOSTEL NAVBAR
+========================================= */
+
+.hostel-navbar {
+    background-color: #0b3d5c;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+}
+
+
+.hostel-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+}
+
+
+.hostel-brand span {
+    color: white;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.hostel-brand:hover span {
+    color: #ffd166;
+}
+
+
+/* =========================================
+   NAVIGATION LINKS
+========================================= */
+
+.hostel-navbar .nav-link {
+    color: white;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+
+.hostel-navbar .nav-link:hover {
+    color: #ffd166;
+}
+
+
+.hostel-navbar .nav-link.active {
+    color: #ffd166;
+}
+
+
+/* =========================================
+   DROPDOWN MENU
+========================================= */
+
+.hostel-navbar .dropdown-menu {
+    background-color: white;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 8px 0;
+
+    min-width: 220px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================
+   DROPDOWN ITEMS
+========================================= */
+
+.hostel-navbar .dropdown-item {
+    color: #0b3d5c;
+
+    font-size: 14px;
+
+    padding: 10px 18px;
+
+    transition: 0.25s ease;
+}
+
+
+.hostel-navbar .dropdown-item:hover {
+    background-color: #0b3d5c;
+
+    color: white;
+
+    padding-left: 22px;
+}
+
+
+/* =========================================
+   DROPDOWN DIVIDER
+========================================= */
+
+.hostel-navbar .dropdown-divider {
+    margin: 6px 12px;
+}
+
+
+/* =========================================
+   BOOK NOW BUTTON
+========================================= */
+
+.booking-btn {
+    background-color: #ffd166;
+
+    color: #0b3d5c;
+
+    font-weight: bold;
+
+    border-radius: 25px;
+
+    border: none;
+
+    transition: 0.3s ease;
+}
+
+
+.booking-btn:hover {
+    background-color: white;
+
+    color: #0b3d5c;
+
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   HOSTEL INTRODUCTION SECTION
+========================================= */
+
+.hostel-intro {
+    background-color: #ffffff;
+
+    padding: 70px 20px;
+
+    text-align: center;
+}
+
+
+/* CONTENT */
+
+.intro-content {
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+
+/* SMALL TITLE */
+
+.intro-label {
+    display: inline-block;
+
+    color: #0b3d5c;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+/* MAIN HEADING */
+
+.intro-content h2 {
+    color: #0b3d5c;
+
+    font-size: 38px;
+
+    font-weight: 800;
+
+    line-height: 1.25;
+
+    margin-bottom: 15px;
+}
+
+
+.intro-content h2 span {
+    color: #d99b00;
+}
+
+
+/* GOLD LINE */
+
+.intro-line {
+    width: 65px;
+
+    height: 4px;
+
+    background-color: #ffd166;
+
+    border-radius: 10px;
+
+    margin: 0 auto 25px;
+}
+
+
+/* DESCRIPTION */
+
+.intro-content p {
+    max-width: 720px;
+
+    margin: 0 auto 30px;
+
+    color: #5f6b75;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.intro-features {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+}
+
+
+.intro-feature {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #0b3d5c;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.intro-feature i {
+    color: #d99b00;
+
+    font-size: 19px;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.intro-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 12px 24px;
+
+    background-color: #0b3d5c;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.intro-btn:hover {
+    background-color: #ffd166;
+
+    color: #0b3d5c;
+
+    transform: translateY(-2px);
+}
+
+
+.intro-btn i {
+    transition: 0.3s ease;
+}
+
+
+.intro-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* =========================================
+   FEATURED SECTION
+========================================= */
+
+.featured-section {
+    background-color: #f7f9fc;
+
+    padding: 85px 20px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.featured-heading {
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 0 auto 50px;
+}
+
+
+.featured-label {
+    display: inline-block;
+
+    color: #0b3d5c;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+.featured-heading h2 {
+    color: #0b3d5c;
+
+    font-size: 38px;
+
+    font-weight: 800;
+
+    margin-bottom: 12px;
+}
+
+
+.featured-heading h2 span {
+    color: #d99b00;
+}
+
+
+.featured-line {
+    width: 60px;
+
+    height: 4px;
+
+    background-color: #ffd166;
+
+    border-radius: 10px;
+
+    margin: 0 auto 20px;
+}
+
+
+.featured-heading p {
+    color: #6b7280;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   FEATURED CARD
+========================================= */
+
+.featured-card {
+    height: 100%;
+
+    background-color: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+    opacity: 0;
+
+    transform: translateY(70px);
+}
+
+
+/* =========================================
+   CARD SCROLL ANIMATION
+========================================= */
+
+.featured-card.show-card {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+/* Different animation delays */
+
+.col-lg-4:nth-child(1) .featured-card {
+    transition-delay: 0.1s;
+}
+
+
+.col-lg-4:nth-child(2) .featured-card {
+    transition-delay: 0.25s;
+}
+
+
+.col-lg-4:nth-child(3) .featured-card {
+    transition-delay: 0.4s;
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.featured-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================================
+   FEATURED IMAGE
+========================================= */
+
+.featured-image {
+    height: 220px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.featured-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+.featured-card:hover .featured-image img {
+    transform: scale(1.07);
+}
+
+
+/* =========================================
+   IMAGE OVERLAY
+========================================= */
+
+.featured-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(11, 61, 92, 0.45),
+        transparent
+    );
+}
+
+
+/* =========================================
+   FEATURED ICON
+========================================= */
+
+.featured-icon {
+    position: absolute;
+
+    z-index: 2;
+
+    bottom: 15px;
+
+    left: 18px;
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #ffd166;
+
+    color: #0b3d5c;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.featured-content {
+    position: relative;
+
+    padding: 28px 25px 30px;
+}
+
+
+.featured-number {
+    position: absolute;
+
+    top: 20px;
+
+    right: 22px;
+
+    color: #e5e7eb;
+
+    font-size: 34px;
+
+    font-weight: 800;
+}
+
+
+.featured-content h3 {
+    color: #0b3d5c;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+
+.featured-content p {
+    color: #6b7280;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   CARD LINK
+========================================= */
+
+.featured-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #0b3d5c;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+
+.featured-link i {
+    transition: transform 0.3s ease;
+}
+
+
+.featured-link:hover {
+    color: #d99b00;
+}
+
+
+.featured-link:hover i {
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .featured-section {
+        padding: 70px 20px;
+    }
+
+
+    .featured-heading h2 {
+        font-size: 34px;
+    }
+
+
+    .featured-image {
+        height: 210px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+    .featured-section {
+        padding: 55px 18px;
+    }
+
+
+    .featured-heading {
+        margin-bottom: 35px;
+    }
+
+
+    .featured-heading h2 {
+        font-size: 29px;
+    }
+
+
+    .featured-heading p {
+        font-size: 14px;
+    }
+
+
+    .featured-image {
+        height: 200px;
+    }
+
+
+    .featured-content {
+        padding: 24px 20px 27px;
+    }
+
+}
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+    .hostel-intro {
+        padding: 50px 18px;
+    }
+
+
+    .intro-content h2 {
+        font-size: 28px;
+    }
+
+
+    .intro-content p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    .intro-features {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 15px;
+    }
+
+
+    .intro-feature {
+        font-size: 13px;
+    }
+
+}
+
+/* =========================================
+   DESKTOP DROPDOWN ON HOVER
+========================================= */
+
+@media (min-width: 992px) {
+
+    .hostel-dropdown:hover > .dropdown-menu {
+        display: block;
+
+        margin-top: 0;
+    }
+
+
+    .hostel-dropdown:hover > .nav-link {
+        color: #ffd166;
+    }
+
+}
+
+
+/* =========================================
+   HAMBURGER BUTTON
+========================================= */
+
+.navbar-toggler {
+    width: 48px;
+
+    height: 42px;
+
+    padding: 6px 9px;
+
+    border: 2px solid white;
+
+    border-radius: 8px;
+
+    background-color: transparent;
+
+    transition: 0.3s ease;
+}
+
+
+.navbar-toggler:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+.navbar-toggler:focus {
+    outline: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================
+   HAMBURGER ICON
+========================================= */
+
+.navbar-toggler-icon {
+    width: 100%;
+
+    height: 100%;
+
+    background-size: 100% 100%;
+
+    filter: brightness(0) invert(1);
+}
+
+
+/* =========================================
+   MOBILE NAVBAR
+========================================= */
+
+@media (max-width: 991px) {
+
+    .hostel-navbar {
+        padding: 10px 0;
+    }
+
+
+    .logo {
+        width: 48px;
+
+        height: 48px;
+    }
+
+
+    .hostel-brand span {
+        font-size: 20px;
+    }
+
+
+    .hostel-navbar .navbar-collapse {
+        padding-top: 15px;
+
+        padding-bottom: 10px;
+    }
+
+
+    .hostel-navbar .navbar-nav {
+        width: 100%;
+    }
+
+
+    .hostel-navbar .nav-item {
+        width: 100%;
+    }
+
+
+    .hostel-navbar .nav-link {
+        padding: 10px 5px;
+    }
+
+
+    /* =================================
+       MOBILE DROPDOWN
+    ================================= */
+
+    .hostel-navbar .dropdown-menu {
+        width: 100%;
+
+        min-width: auto;
+
+        margin-top: 5px;
+
+        margin-left: 0;
+
+        border-radius: 8px;
+
+        box-shadow: none;
+    }
+
+
+    .hostel-navbar .dropdown-item {
+        padding: 10px 15px;
+    }
+
+
+    /* =================================
+       BOOK NOW
+    ================================= */
+
+    .booking-btn {
+        display: inline-block;
+
+        margin-top: 8px;
+
+        margin-bottom: 8px;
+    }
+
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .hostel-video-box {
+        height: 300px;
+    }
+
+    .video-content h1 {
+        font-size: 30px;
+    }
+
+    .video-content p {
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+    .hostel-video-box {
+        height: 270px;
+    }
+
+    .video-content {
+        left: 8%;
+        right: 8%;
+        bottom: 40px;
+    }
+
+    .video-content h1 {
+        font-size: 23px;
+    }
+
+    .video-content p {
+        font-size: 14px;
+    }
+
+    .video-content .hero-btn {
+        padding: 9px 17px;
+        font-size: 14px;
+    }
+
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .hostel-hero {
+        min-height: auto;
+
+        padding: 35px 0;
+    }
+
+
+    .small-images {
+        flex-direction: row;
+    }
+
+
+    .small-image-box {
+        height: 180px;
+    }
+
+
+    .hostel-carousel {
+        height: 400px;
+    }
+
+
+    .hostel-carousel .carousel-item {
+        height: 400px;
+    }
+
+
+    .hostel-carousel .carousel-caption h1 {
+        font-size: 30px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+    .hostel-hero {
+        padding: 20px 0;
+    }
+
+
+    .small-images {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+
+    .small-image-box {
+        height: 160px;
+    }
+
+
+    .hostel-carousel {
+        height: 330px;
+    }
+
+
+    .hostel-carousel .carousel-item {
+        height: 330px;
+    }
+
+
+    .hostel-carousel .carousel-caption {
+        left: 12%;
+        right: 12%;
+        bottom: 55px;
+    }
+
+
+    .hostel-carousel .carousel-caption h1 {
+        font-size: 23px;
+    }
+
+
+    .hostel-carousel .carousel-caption p {
+        font-size: 14px;
+    }
+
+
+    .hero-btn {
+        padding: 9px 17px;
+        font-size: 14px;
+    }
+
+}
 
 /* =========================================
    TABLET
@@ -443,12 +1634,14 @@
 
     .small-images {
         flex-direction: row;
+        display:none;
+
     }
 
 
-    .small-image-box {
+    /* .small-image-box {
         height: 200px;
-    }
+    } */
 
 
     .hostel-carousel .carousel-item {
@@ -464,45 +1657,6 @@
     .hostel-carousel .carousel-caption h1 {
         font-size: 32px;
     }
-
-        .hostel-navbar {
-        padding: 10px 0;
-    }
-
-    .logo {
-        width: 48px;
-        height: 48px;
-    }
-
-    .hostel-brand span {
-        font-size: 20px;
-    }
-
-    .hostel-navbar .navbar-nav {
-        padding-top: 12px;
-    }
-
-    .hostel-navbar .nav-link {
-        padding: 10px 5px;
-    }
-
-    /*
-       On mobile, Bootstrap handles the
-       dropdown through tapping.
-    */
-
-    .hostel-navbar .dropdown-menu {
-        box-shadow: none;
-        border-radius: 5px;
-        margin-left: 5px;
-    }
-
-    .booking-btn {
-        display: inline-block;
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
-
 }
 
 
@@ -512,7 +1666,7 @@
 ========================================= */
 
 @media (max-width: 576px) {
-
+         
     .hostel-hero {
         padding: 25px 0;
     }
@@ -520,7 +1674,7 @@
 
     .small-images {
         flex-direction: column;
-
+        display:none;
         gap: 15px;
     }
 
@@ -566,3 +1720,21 @@
     }
 
 }
+
+/* =========================================
+   SHOW DROPDOWN ON HOVER
+========================================= */
+
+@media (min-width: 992px) {
+
+    .hostel-dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+
+    .hostel-dropdown:hover .dropdown-toggle {
+        color: #ffd166;
+    }
+
+}
+
