@@ -69,3 +69,95 @@ facilityCards.forEach(function(card) {
     facilityCardObserver.observe(card);
 
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  /* ---------- 1. Reveal "Why" rows ---------- */
+  const whyRows = document.querySelectorAll('.why-row[data-reveal]');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const i = [...whyRows].indexOf(entry.target);
+        entry.target.style.transitionDelay = `${i * 90}ms`;
+        entry.target.classList.add('is-visible');
+        revealObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  whyRows.forEach((r) => revealObs.observe(r));
+
+  /* ---------- 2. Testimonial Slider ---------- */
+  const track = document.getElementById('testiTrack');
+  const cards = track.querySelectorAll('.t-card');
+  const dotsWrap = document.getElementById('testiDots');
+  const prevBtn = document.getElementById('testiPrev');
+  const nextBtn = document.getElementById('testiNext');
+
+  let current = 0;
+  let perView = getPerView();
+  let maxIndex = Math.max(0, cards.length - perView);
+
+  function getPerView() {
+    const w = window.innerWidth;
+    if (w <= 600) return 1;
+    if (w <= 900) return 2;
+    return 3;
+  }
+
+  // build dots
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    for (let i = 0; i <= maxIndex; i++) {
+      const dot = document.createElement('button');
+      if (i === current) dot.classList.add('active');
+      dot.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(dot);
+    }
+  }
+
+  function update() {
+    const cardWidth = cards[0].getBoundingClientRect().width;
+    const gap = 24;
+    const offset = current * (cardWidth + gap);
+    track.style.transform = `translateX(-${offset}px)`;
+
+    [...dotsWrap.children].forEach((d, i) =>
+      d.classList.toggle('active', i === current)
+    );
+  }
+
+  function goTo(i) {
+    current = Math.max(0, Math.min(i, maxIndex));
+    update();
+  }
+
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+
+  /* ---------- Auto-play ---------- */
+  let autoplay = setInterval(() => {
+    current = current >= maxIndex ? 0 : current + 1;
+    update();
+  }, 4500);
+
+  // pause on hover
+  track.addEventListener('mouseenter', () => clearInterval(autoplay));
+  track.addEventListener('mouseleave', () => {
+    autoplay = setInterval(() => {
+      current = current >= maxIndex ? 0 : current + 1;
+      update();
+    }, 4500);
+  });
+
+  /* ---------- Rebuild on resize ---------- */
+  window.addEventListener('resize', () => {
+    perView = getPerView();
+    maxIndex = Math.max(0, cards.length - perView);
+    if (current > maxIndex) current = maxIndex;
+    buildDots();
+    update();
+  });
+
+  buildDots();
+  update();
+});
