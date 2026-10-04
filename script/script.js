@@ -161,3 +161,53 @@ document.addEventListener('DOMContentLoaded', () => {
   buildDots();
   update();
 });
+
+// facilities
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.fac-card[data-reveal]');
+
+  /* ---------- 1. Staggered Reveal ---------- */
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = [...cards].indexOf(entry.target);
+          entry.target.style.transitionDelay = `${index * 110}ms`;
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+  cards.forEach((c) => revealObserver.observe(c));
+
+  /* ---------- 2. Subtle Parallax on Images ---------- */
+  let ticking = false;
+  const images = document.querySelectorAll('.fac-card img');
+
+  const updateParallax = () => {
+    images.forEach((img) => {
+      const rect = img.parentElement.getBoundingClientRect();
+      // only animate if in view
+      if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+
+      const offset = (rect.top + rect.height / 2 - window.innerHeight / 2)
+                     / window.innerHeight;
+      // cap between -1 and 1
+      const clamped = Math.max(-1, Math.min(1, offset));
+      const shift = clamped * -18; // shift up to 18px
+
+      img.style.transform = `translateY(${shift}px) scale(1.08)`;
+    });
+    ticking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  });
+  updateParallax();
+});

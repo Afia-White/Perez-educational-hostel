@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>PEREZ-HOSTEL</title>
+    <title>PEREZ-HOSTEL_Rooms(2_n_1)</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -30,6 +30,7 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- My CSS -->
+     <link rel="stylesheet" href="stylesheets/room2_in_1.css">
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body>
@@ -369,47 +370,13 @@
     </div>
 
 </nav>
-<!-- =========================================
-     HERO VIDEO
-========================================= -->
-
-<section class="hero-video-section">
-
-    <div class="hero-video-container">
-
-        <!-- VIDEO -->
-
-        <video
-            class="hero-video"
-            autoplay
-            muted
-            loop
-            playsinline>
-
-            <source
-                src="./video/video1.mp4"
-                type="video/mp4">
-
-            Your browser does not support the video element.
-
-        </video>
-
-
-        <!-- DARK OVERLAY -->
-
-        <div class="hero-video-overlay"></div>
-
-
-        <!-- HERO CONTENT -->
+<!-- Hostel Section -->
+ <section class="hero">
+    <!-- HERO CONTENT -->
 
         <div class="hero-video-content">
-
-            <span class="hero-small-title">
-                WELCOME TO
-            </span>
-
             <h1>
-                PEREZ-HOSTEL
+                2 in 1 Room
             </h1>
 
             <p>
@@ -417,12 +384,6 @@
             </p>
 
             <div class="hero-buttons">
-
-                <a href="rooms.html" class="hero-main-btn">
-                    Explore Rooms
-                    <i class="bi bi-arrow-right"></i>
-                </a>
-
                 <a href="booking.html" class="hero-outline-btn">
                     Book Now
                 </a>
@@ -430,610 +391,77 @@
             </div>
 
         </div>
+ </section>
 
+<section class="why" id="why">
+  <div class="why__container">
+
+    <!-- Left: Sticky Header -->
+    <div class="why__aside">
+        <img class="why__eyebrow" src="./images/2things.PNG" alt="">
+      <!-- <span class="why__eyebrow">Why Choose Us</span> -->
+      <!-- <h2 class="why__title">More Than Just a Place to Stay</h2>
+      <p class="why__text">
+        We blend comfort, security, and community — so you can focus on
+        what really matters: your studies, your work, your growth.
+      </p> -->
+      <a href="#hostels" class="why__btn">Book Your Room →</a>
     </div>
 
-</section>
-<!-- =========================================
-     ABOUT PEREZ-HOSTEL
-========================================= -->
+    <!-- Right: Feature Rows -->
+    <div class="why__list">
 
-<section class="hostel-intro">
-
-    <div class="container">
-
-        <div class="intro-content">
-
-            <span class="intro-label">
-                ABOUT PEREZ HOSTEL
-            </span>
-
-            <h2>
-                A Comfortable Place to
-                <span>Live, Learn & Grow</span>
-            </h2>
-
-            <div class="intro-line"></div>
-
-            <p>
-                Perez Hostel provides students with comfortable,
-                secure and convenient accommodation in a peaceful
-                and welcoming environment. Our goal is to create
-                a home away from home where students can focus
-                on their studies while enjoying a positive hostel
-                experience.
-            </p>
-
-            <div class="intro-features">
-
-                <div class="intro-feature">
-                    <i class="bi bi-house-heart-fill"></i>
-                    <span>Comfortable Accommodation</span>
-                </div>
-
-                <div class="intro-feature">
-                    <i class="bi bi-shield-check"></i>
-                    <span>Safe & Secure Environment</span>
-                </div>
-
-                <div class="intro-feature">
-                    <i class="bi bi-geo-alt-fill"></i>
-                    <span>Convenient Location</span>
-                </div>
-
-            </div>
-
-            <a href="about.html" class="intro-btn">
-                Learn More About Us
-                <i class="bi bi-arrow-right"></i>
-            </a>
-
+      <article class="why-row" data-reveal>
+        <span class="why-row__num">01</span>
+        <span class="why-row__icon">🔒</span>
+        <div class="why-row__body">
+          <h3>Safe & Secure Environment</h3>
+          <p>Biometric entry, 24/7 CCTV, and on-site wardens ensure peace of mind for you and your family.</p>
         </div>
+      </article>
 
-    </div>
-
-</section>
-<!-- =========================================
-     FEATURED SECTION
-========================================= -->
-
-<section class="featured-section">
-
-    <div class="container">
-
-        <!-- SECTION HEADING -->
-
-        <div class="featured-heading">
-
-            <span class="featured-label">
-                WHY PEREZ HOSTEL
-            </span>
-
-            <h2>
-                Featured <span>Highlights</span>
-            </h2>
-
-            <div class="featured-line"></div>
-
-            <p>
-                Discover the comfort, convenience and security
-                that make Perez Hostel a great place for students
-                to live, study and enjoy hostel life.
-            </p>
-
+      <article class="why-row" data-reveal>
+        <span class="why-row__num">02</span>
+        <span class="why-row__icon">💰</span>
+        <div class="why-row__body">
+          <h3>Affordable, All-Inclusive Pricing</h3>
+          <p>Rent, Wi-Fi, meals, laundry, and utilities bundled into one transparent monthly fee. No surprises.</p>
         </div>
+      </article>
 
-
-        <!-- =================================
-             FEATURED CARDS
-        ================================== -->
-
-        <div class="row g-4">
-
-
-            <!-- CARD 1 -->
-
-            <div class="col-12 col-md-6 col-lg-4">
-
-                <div class="featured-card reveal-card">
-
-                    <div class="featured-image">
-
-                        <img
-                            src="./images/hostel.JPG"
-                            alt="Comfortable Perez Hostel accommodation">
-
-                        <div class="featured-icon">
-                            <i class="bi bi-house-heart-fill"></i>
-                        </div>
-
-                    </div>
-
-
-                    <div class="featured-content">
-
-                        <span class="featured-number">
-                            01
-                        </span>
-
-                        <h3>
-                            Comfortable Rooms
-                        </h3>
-
-                        <p>
-                            Enjoy thoughtfully designed rooms that
-                            provide a comfortable environment for
-                            studying, resting and everyday student life.
-                        </p>
-
-                        <a href="room.html" class="featured-link">
-                            Explore Rooms
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- CARD 2 -->
-
-            <div class="col-12 col-md-6 col-lg-4">
-
-                <div class="featured-card reveal-card">
-
-                    <div class="featured-image">
-
-                        <img
-                            src="./images/2people.PNG"
-                            alt="Perez Hostel student accommodation">
-
-                        <div class="featured-icon">
-                            <i class="bi bi-wifi"></i>
-                        </div>
-
-                    </div>
-
-
-                    <div class="featured-content">
-
-                        <span class="featured-number">
-                            02
-                        </span>
-
-                        <h3>
-                            Connected Living
-                        </h3>
-
-                        <p>
-                            Stay connected with reliable internet
-                            access, convenient facilities and spaces
-                            designed to support your academic lifestyle.
-                        </p>
-
-                        <a href="facilities.html" class="featured-link">
-                            View Facilities
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- CARD 3 -->
-
-            <div class="col-12 col-md-6 col-lg-4">
-
-                <div class="featured-card reveal-card">
-
-                    <div class="featured-image">
-
-                        <img
-                            src="./images/kitchen.PNG"
-                            alt="Perez Hostel facilities">
-
-                        <div class="featured-icon">
-                            <i class="bi bi-shield-check"></i>
-                        </div>
-
-                    </div>
-
-
-                    <div class="featured-content">
-
-                        <span class="featured-number">
-                            03
-                        </span>
-
-                        <h3>
-                            Safe & Convenient
-                        </h3>
-
-                        <p>
-                            Experience a welcoming environment with
-                            essential facilities and security designed
-                            to give students peace of mind.
-                        </p>
-
-                        <a href="facilities.html" class="featured-link">
-                            Discover More
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
+      <article class="why-row" data-reveal>
+        <span class="why-row__num">03</span>
+        <span class="why-row__icon">📍</span>
+        <div class="why-row__body">
+          <h3>Prime Location</h3>
+          <p>Minutes from universities, metro stations, hospitals, and supermarkets — everything within reach.</p>
         </div>
+      </article>
 
-    </div>
-
-</section>
-
-<!-- =========================================
-     FACILITIES PREVIEW
-========================================= -->
-
-<section class="facilities-gallery">
-
-    <div class="container">
-
-        <!-- SECTION INTRO -->
-
-        <div class="facilities-gallery-heading">
-
-            <span>EXPERIENCE PEREZ HOSTEL</span>
-
-            <h2>
-                Everything You Need,
-                <strong>Right Here.</strong>
-            </h2>
-
-            <div class="facilities-heading-line"></div>
-
-            <p>
-                From spaces that support your studies to facilities
-                that make everyday living easier, Perez Hostel is
-                designed with student comfort and convenience in mind.
-            </p>
-
+      <article class="why-row" data-reveal>
+        <span class="why-row__num">04</span>
+        <span class="why-row__icon">🧹</span>
+        <div class="why-row__body">
+          <h3>Clean & Well-Maintained</h3>
+          <p>Daily housekeeping, sanitized common areas, and prompt maintenance — always spotless.</p>
         </div>
-
-
-        <!-- =================================
-             FACILITY GRID
-        ================================== -->
-
-        <div class="facilities-grid">
-
-
-            <!-- STUDY ROOM -->
-
-            <article class="facility-card facility-card-large">
-
-                <img
-                    src="./images/library.jpg"
-                    alt="Perez Hostel study room">
-
-                <div class="facility-overlay">
-
-                    <div class="facility-icon">
-                        <i class="bi bi-book-fill"></i>
-                    </div>
-
-                    <div>
-
-                        <span>01</span>
-
-                        <h3>Study & Library</h3>
-
-                        <p>
-                            A peaceful space for reading,
-                            studying and academic work.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- WI-FI -->
-
-            <article class="facility-card">
-
-                <img
-                    src="./images/wwifi.jpg"
-                    alt="Wi-Fi lounge at Perez Hostel">
-
-                <div class="facility-overlay">
-
-                    <div class="facility-icon">
-                        <i class="bi bi-wifi"></i>
-                    </div>
-
-                    <div>
-
-                        <span>02</span>
-
-                        <h3>Wi-Fi & Internet</h3>
-
-                        <p>
-                            Stay connected for school,
-                            communication and entertainment.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- KITCHEN -->
-
-            <article class="facility-card">
-
-                <img
-                    src="./images/kitchen.PNG"
-                    alt="Perez Hostel kitchen">
-
-                <div class="facility-overlay">
-
-                    <div class="facility-icon">
-                        <i class="bi bi-egg-fried"></i>
-                    </div>
-
-                    <div>
-
-                        <span>03</span>
-
-                        <h3>Kitchen</h3>
-
-                        <p>
-                            Convenient facilities for
-                            preparing everyday meals.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- SECURITY -->
-
-            <article class="facility-card">
-
-                <img
-                    src="./images/cctv.jpeg"
-                    alt="Perez Hostel security">
-
-                <div class="facility-overlay">
-
-                    <div class="facility-icon">
-                        <i class="bi bi-shield-check"></i>
-                    </div>
-
-                    <div>
-
-                        <span>04</span>
-
-                        <h3>Security</h3>
-
-                        <p>
-                            A secure environment where
-                            residents can feel comfortable.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- PARKING -->
-
-            <article class="facility-card">
-
-                <img
-                    src="./images/facilities/parking.jpg"
-                    alt="Perez Hostel parking">
-
-                <div class="facility-overlay">
-
-                    <div class="facility-icon">
-                        <i class="bi bi-car-front-fill"></i>
-                    </div>
-
-                    <div>
-
-                        <span>05</span>
-
-                        <h3>Parking</h3>
-
-                        <p>
-                            Convenient parking facilities
-                            for residents and visitors.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- RECREATION -->
-
-            <article class="facility-card facility-card-wide">
-
-                <img
-                    src="./images/facilities/recreation.jpg"
-                    alt="Perez Hostel recreation area">
-
-                <div class="facility-overlay">
-
-                    <div class="facility-icon">
-                        <i class="bi bi-controller"></i>
-                    </div>
-
-                    <div>
-
-                        <span>06</span>
-
-                        <h3>Recreation Area</h3>
-
-                        <p>
-                            Relax, socialize and enjoy your
-                            free time in a welcoming environment.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </article>
-
+      </article>
+
+      <article class="why-row" data-reveal>
+        <span class="why-row__num">05</span>
+        <span class="why-row__icon">🤝</span>
+        <div class="why-row__body">
+          <h3>Vibrant Community</h3>
+          <p>Weekly events, shared lounges, and a welcoming resident community that feels like family.</p>
         </div>
+      </article>
 
-
-        <!-- BUTTON -->
-
-        <div class="facilities-gallery-button">
-
-            <a href="facilities.html">
-                Explore All Facilities
-                <i class="bi bi-arrow-right"></i>
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-<section class="testi" id="testimonials">
-  <div class="testi__container">
-
-    <!-- Header -->
-    <div class="testi__header">
-      <span class="testi__eyebrow">Testimonials</span>
-      <h2 class="residents">
-        What our
-        <strong>Residents Say.</strong>
-      </h2>
-      <!-- <h2 class="testi__title">What Our Residents Say</h2> -->
-      <p class="testi__subtitle">
-        Real stories from students and professionals who call our hostel home.
-      </p>
-    </div>
-
-    <!-- Slider -->
-    <div class="testi__viewport">
-      <div class="testi__track" id="testiTrack">
-
-        <article class="t-card">
-          <div class="t-card__quote">"</div>
-          <div class="t-card__stars">★★★★★</div>
-          <p class="t-card__text">
-            Honestly the best hostel I've stayed in. The staff feels like family,
-            and the study lounge saved my finals week. Worth every penny.
-          </p>
-          <div class="t-card__author">
-            <img src="./images/sissy.jpeg" alt="Francisca Badu">
-            <div>
-              <strong>Francisca Badu</strong>
-              <span>Engineering Student</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="t-card">
-          <div class="t-card__quote">"</div>
-          <div class="t-card__stars">★★★★★</div>
-          <p class="t-card__text">
-            Clean rooms, great food, and rock-solid Wi-Fi. I work remotely and
-            never had a single issue. The security gives my parents peace of mind.
-          </p>
-          <div class="t-card__author">
-            <img src="./images/miss.jpeg" alt="Priya S.">
-            <div>
-              <strong>Kyla Kusi</strong>
-              <span>Software Developer</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="t-card">
-          <div class="t-card__quote">"</div>
-          <div class="t-card__stars">★★★★★</div>
-          <p class="t-card__text">
-            Moved in as a stranger, left with lifelong friends. The community
-            events and shared spaces make it feel like home, not a hostel.
-          </p>
-          <div class="t-card__author">
-            <img src="./images/peter.jpeg" alt="Peter Johnson.">
-            <div>
-              <strong>Peter Johnson</strong>
-              <span>MBA Student</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="t-card">
-          <div class="t-card__quote">"</div>
-          <div class="t-card__stars">★★★★★</div>
-          <p class="t-card__text">
-            Affordable, well-located, and spotless. The laundry service alone
-            is worth it — I save hours every week.
-          </p>
-          <div class="t-card__author">
-            <img src="./images/mom.jpeg" alt="Francisca Kusi">
-            <div>
-              <strong>Francisca Kusi</strong>
-              <span>Medical Intern</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-
-    <!-- Controls -->
-    <div class="testi__controls">
-      <button class="testi__arrow" id="testiPrev" aria-label="Previous">←</button>
-      <div class="testi__dots" id="testiDots"></div>
-      <button class="testi__arrow" id="testiNext" aria-label="Next">→</button>
     </div>
 
   </div>
 </section>
-<!-- =========================================
-     PEREZ HOSTEL FOOTER
-========================================= -->
-<!-- Newsletter Strip -->
-        <div class="footer__newsletter">
-            <div class="footer__newsletter-text">
-                <h3>Stay in the Loop</h3>
-                <p>Get room availability, offers, and hostel news — straight to your inbox.</p>
-            </div>
-            <form class="footer__form" onsubmit="event.preventDefault();">
-                <input type="email" placeholder="Enter your email address" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
-<footer class="hostel-footer">
+ <!-- footer Section -->
+ <footer class="hostel-footer">
     
     <div class="container">
 
