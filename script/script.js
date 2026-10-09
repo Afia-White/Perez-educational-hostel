@@ -211,3 +211,125 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   updateParallax();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('[data-scroll-track]');
+  const cards = document.querySelectorAll('.f-card');
+
+  /* ---------- 1. Staggered Reveal on Scroll ---------- */
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = [...cards].indexOf(entry.target);
+          entry.target.style.transitionDelay = `${index * 120}ms`;
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  cards.forEach((card) => revealObserver.observe(card));
+
+  /* ---------- 2. Parallax Drift on Scroll ---------- */
+  let ticking = false;
+  const parallaxCards = document.querySelectorAll('[data-parallax]');
+
+  function updateParallax() {
+    const scrollY = window.scrollY;
+
+    parallaxCards.forEach((card) => {
+      const dir = parseFloat(card.dataset.parallax); // 1 or -1
+      const rect = card.getBoundingClientRect();
+      const cardCenter = rect.top + rect.height / 2;
+      const viewportCenter = window.innerHeight / 2;
+
+      // distance from center of viewport (-1 → 1 range)
+      const offset = (cardCenter - viewportCenter) / window.innerHeight;
+      const shift = offset * 30 * dir; // max 30px shift
+
+      card.style.setProperty('--drift', `${shift}px`);
+    });
+
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  });
+
+  updateParallax();
+});document.addEventListener('DOMContentLoaded', () => {
+  const items = document.querySelectorAll('.gallery__item');
+  const preview = document.getElementById('galleryPreview');
+  const previewImg = document.getElementById('galleryPreviewImg');
+
+  let mouseX = 0, mouseY = 0;
+  let currentX = 0, currentY = 0;
+  let rafId = null;
+
+  /* ---------- Smooth follow loop (lerp) ---------- */
+  const follow = () => {
+    // ease toward the mouse position
+    currentX += (mouseX - currentX) * 0.15;
+    currentY += (mouseY - currentY) * 0.15;
+
+    preview.style.left = `${currentX}px`;
+    preview.style.top  = `${currentY}px`;
+
+    rafId = requestAnimationFrame(follow);
+  };
+
+  /* ---------- Attach listeners to each name ---------- */
+  items.forEach((item) => {
+    item.addEventListener('mouseenter', () => {
+      const img = item.dataset.img;
+      previewImg.src = img;
+      preview.classList.add('is-active');
+
+      // start following if not already
+      if (!rafId) {
+        currentX = mouseX;
+        currentY = mouseY;
+        follow();
+      }
+    });
+
+    item.addEventListener('mouseleave', () => {
+      preview.classList.remove('is-active');
+
+      // stop follow loop once hidden
+      setTimeout(() => {
+        if (!preview.classList.contains('is-active')) {
+          cancelAnimationFrame(rafId);
+          rafId = null;
+        }
+      }, 400);
+    });
+  });
+
+  /* ---------- Track mouse globally ---------- */
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  /* ---------- Touch fallback (tap to preview) ---------- */
+  items.forEach((item) => {
+    item.addEventListener('touchstart', () => {
+      previewImg.src = item.dataset.img;
+      preview.classList.add('is-active');
+      preview.style.left = '50%';
+      preview.style.top  = '50%';
+    });
+  });
+
+  document.addEventListener('touchend', () => {
+    preview.classList.remove('is-active');
+  });
+});
