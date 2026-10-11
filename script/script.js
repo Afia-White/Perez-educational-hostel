@@ -333,3 +333,29 @@ document.addEventListener('DOMContentLoaded', () => {
     preview.classList.remove('is-active');
   });
 });
+
+
+const contactForm = document.getElementById("hostelContactForm");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("contactName").value.trim();
+        const email = document.getElementById("contactEmail").value.trim();
+        const subject = document.getElementById("contactSubject").value;
+        const message = document.getElementById("contactMessage").value.trim();
+        const status = document.getElementById("contactFormStatus");
+
+        if (!name || !email || !subject || !message) {
+            status.textContent = "Please complete all required fields.";
+            status.style.color = "#b42318";
+            return;
+        }
+
+        status.textContent =
+            "Your form has been checked, but it has not been sent yet. Connect a form service or email backend to deliver your message.";
+
+        status.style.color = "#0b8064";
+    });
+}

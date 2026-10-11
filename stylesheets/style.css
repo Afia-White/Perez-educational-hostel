@@ -2496,11 +2496,11 @@
 
     padding: 6px 9px;
 
-    border: 2px solid white;
+    border: 2px solid lightskyblue;
 
     border-radius: 8px;
 
-    background-color: transparent;
+    background-color:transparent;
 
     transition: 0.3s ease;
 }
@@ -2541,6 +2541,8 @@
 
     .hostel-navbar {
         padding: 10px 0;
+        background-color:lightblue;
+
     }
 
 
@@ -2759,106 +2761,6 @@
 
     .hero-btn {
         padding: 9px 17px;
-        font-size: 14px;
-    }
-
-}
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 991px) {
-
-    .hostel-hero {
-        padding: 40px 0;
-    }
-
-
-    .small-images {
-        flex-direction: row;
-        display:none;
-
-    }
-
-
-    /* .small-image-box {
-        height: 200px;
-    } */
-
-
-    .hostel-carousel .carousel-item {
-        height: 400px;
-    }
-
-
-    .hostel-carousel .carousel-item img {
-        height: 400px;
-    }
-
-
-    .hostel-carousel .carousel-caption h1 {
-        font-size: 32px;
-    }
-}
-
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 576px) {
-         
-    .hostel-hero {
-        padding: 25px 0;
-    }
-
-
-    .small-images {
-        flex-direction: column;
-        display:none;
-        gap: 15px;
-    }
-
-
-    .small-image-box {
-        height: 180px;
-    }
-
-
-    .hostel-carousel .carousel-item {
-        height: 350px;
-    }
-
-
-    .hostel-carousel .carousel-item img {
-        height: 350px;
-    }
-
-
-    .hostel-carousel .carousel-caption {
-        bottom: 55px;
-
-        left: 12%;
-
-        right: 12%;
-    }
-
-
-    .hostel-carousel .carousel-caption h1 {
-        font-size: 25px;
-    }
-
-
-    .hostel-carousel .carousel-caption p {
-        font-size: 15px;
-    }
-
-
-    .hero-btn {
-        padding: 9px 18px;
-
         font-size: 14px;
     }
 
