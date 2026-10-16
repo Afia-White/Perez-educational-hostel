@@ -2541,6 +2541,8 @@
 
     .hostel-navbar {
         padding: 10px 0;
+        z-index:999;
+
         background-color:lightblue;
 
     }

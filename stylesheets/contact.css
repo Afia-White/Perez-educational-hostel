@@ -4,16 +4,15 @@
 ========================================= */
 
 .contact-hero {
-    position: relative;
-    overflow: hidden;
-    padding: 100px 20px;
-    background:
-        radial-gradient(
-            circle at 85% 20%,
-            rgba(255, 209, 102, 0.15),
-            transparent 30%
-        ),
-        linear-gradient(120deg, #071f2e, #0b3d5c 70%, #125477);
+    background-image:linear-gradient( 
+        rgba(0,0,0,0.1),
+        rgba(0,0,0,0.1)
+    ), url("/images/contact.jpg"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:500px; 
+    padding: 100px 20px; 
 }
 
 .contact-hero::after {
@@ -51,7 +50,7 @@
 
 .contact-hero h1 {
     margin: 0 0 20px;
-    color: white;
+    color:navy;
     font-size: clamp(42px, 6vw, 66px);
     font-weight: 800;
 }
@@ -446,7 +445,7 @@
 
 .contact-booking-banner {
     padding: 60px 0;
-    background-color: #0b3d5c;
+    /* background-color: #0b3d5c; */
 }
 
 .booking-banner-content {
@@ -458,21 +457,21 @@
 
 .booking-banner-content h2 {
     margin: 10px 0;
-    color: #ffffff;
+    color:gold;
     font-size: clamp(24px, 4vw, 34px);
     font-weight: 800;
 }
 
 .booking-banner-content p {
     margin: 0;
-    color: rgba(255, 255, 255, 0.8);
+    color: navy;
     font-size: 13px;
     line-height: 1.8;
 }
-
+/* 
 .banner-booking-btn {
     flex-shrink: 0;
-}
+} */
 
 
 /* RESPONSIVE DESIGN */
