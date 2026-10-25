@@ -1,741 +1,262 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="stylesheets/contact.css">
-    <link rel="stylesheet" href="stylesheets/gallery.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>PEREZ-HOSTEL_BOOKING</title>
+    <title>Book Now | PEREZ-HOSTEL</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- OFFLINE BOOTSTRAP CSS -->
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-    <!-- BOOTSTRAP ICONS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Serif+SC:wght@200..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="./images/favicon_io/site.webmanifest">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- My CSS -->
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./stylesheets/booking.css">
 </head>
+
 <body>
-    <!-- NAVBAR -->
-    <!-- =========================================
-     PEREZ-HOSTEL NAVBAR
-========================================= -->
 
-<nav class="navbar navbar-expand-lg hostel-navbar">
-
-    <div class="container">
-
-        <!-- LOGO + HOSTEL NAME -->
-        <a class="navbar-brand hostel-brand" href="index.html">
-
-            <img
-                class="logo"
-                src="./images/logo.png"
-                alt="PEREZ-HOSTEL Logo">
-
-            <span>PEREZ-HOSTEL</span>
-
-        </a>
-
-
-        <!-- =================================
-             MOBILE HAMBURGER
-        ================================== -->
-
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#hostelNavbar"
-            aria-controls="hostelNavbar"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
-
-
-        <!-- =================================
-             NAVIGATION
-        ================================== -->
-
-        <div
-            class="collapse navbar-collapse"
-            id="hostelNavbar">
-
-            <ul class="navbar-nav ms-auto">
-
-
-                <!-- HOME -->
-                <li class="nav-item">
-
-                    <a
-                        class="nav-link active"
-                        href="index.html">
-                        Home
-
-                    </a>
-
-                </li>
-
-
-                <!-- =================================
-                     ROOMS DROPDOWN
-                ================================== -->
-
-                <li class="nav-item dropdown hostel-dropdown" >
-
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Rooms
-
-                    </a>
-
-
-                    <ul class="dropdown-menu">
-
-
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="single_room.html">
-                                Single Room
-
-                            </a>
-                        </li>
-
-
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="room2_n_1.html">
-                                2-in-1 Room
-
-                            </a>
-                        </li>
-
-
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="room3_n_1.html">
-                                3-in-1 Room
-
-                            </a>
-                        </li>
-
-
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="premium.html">
-                                Premium Room
-
-                            </a>
-                        </li>
-
-
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="room_comparison.html">
-                                Room Comparison
-
-                            </a>
-                        </li>
-
-
-                    </ul>
-
-                </li>
-                <!-- FACILITIES -->
-                <li class="nav-item">
-
-                    <a
-                        class="nav-link"
-                        href="#facilities">
-                        Facilities
-
-                    </a>
-
-                </li>
-                
-                <!-- =================================
-                     PRICING DROPDOWN
-                ================================== -->
-
-                <li class="nav-item dropdown hostel-dropdown">
-
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Pricing
-
-                    </a>
-
-
-                    <ul class="dropdown-menu">
-
-
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="pricing.html#rooms">
-
-                                Room Prices
-
-                            </a>
-                        </li>
-
-
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="pricing.html#payment">
-                                Payment Plans
-
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </li>
-
-
-                <!-- GALLERY -->
-                <li class="nav-item">
-
-                    <a
-                        class="nav-link"
-                        href="gallery.html">
-                        Gallery
-
-                    </a>
-
-                </li>
-
-
-                <!-- CONTACT -->
-                <li class="nav-item">
-
-                    <a
-                        class="nav-link"
-                        href="contact.html">
-                        Contact
-
-                    </a>
-
-                </li>
-
-
-                <!-- BOOK NOW -->
-                <li class="nav-item ms-lg-3">
-
-                    <a
-                        class="btn booking-btn"
-                        href="#contact-form">
-                        Book Now
-
-                    </a>
-
-                </li>
-
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</nav>
-<!-- Hostel Section -->
-
-    <!-- CONTACT HERO -->
-    <section class="contact-hero">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark hostel-navbar">
         <div class="container">
-            <div class="contact-hero-content">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img src="./images/logo.png" alt="Perez Hostel Logo"
+                     width="42" height="42" class="me-2">
+                PEREZ-HOSTEL
+            </a>
 
-                <span class="contact-label">
-                    WE'RE HERE TO HELP
+            <a href="index.html" class="btn home-btn">
+                <i class="bi bi-house-door"></i> Home
+            </a>
+        </div>
+    </nav>
+
+    <!-- Booking Hero -->
+    <section class="booking-hero">
+        <div class="container">
+            <div class="booking-content">
+                <span class="booking-label">
+                    <i class="bi bi-calendar-check"></i>
+                    YOUR COMFORT STARTS HERE
                 </span>
 
-                <h1>Get in <span>Touch</span></h1>
+                <h1>Book Your Stay at <span>Perez Hostel</span></h1>
 
                 <p>
-                    Have questions about our rooms, prices or facilities?
-                    Contact us today. We're happy to help you find your
-                    home away from home.
+                    Find your comfortable space to study, relax and live.
+                    Complete a booking request to get started.
                 </p>
+
+                <button type="button"
+                        class="btn book-now-btn"
+                        data-bs-toggle="modal"
+                        data-bs-target="#bookingModal">
+                    Book Now <i class="bi bi-arrow-right"></i>
+                </button>
             </div>
         </div>
     </section>
-               <!-- MESSAGE FORM AND CONTACT DETAILS -->
-    <section class="contact-message-section" id="contact-form">
 
+    <!-- Benefits -->
+    <section class="booking-benefits">
         <div class="container">
+            <div class="row g-4 text-center">
 
-            <div class="row g-5 align-items-start">
-
-                <!-- LEFT INFORMATION -->
-                <div class="col-lg-5">
-
-                    <div class="contact-message-info">
-
-                        <span class="contact-label-dark">
-                            LET'S TALK
-                        </span>
-
-                        <h2>
-                            Have a Question?
-                            <strong>Send Us a Message.</strong>
-                        </h2>
-
-                        <p>
-                            Whether you want to ask about room prices,
-                            facilities or reservations, send us a message
-                            and let us know how we can assist you.
-                        </p>
-
-
-                        <div class="contact-promise">
-
-                            <div class="promise-icon">
-                                <i class="bi bi-chat-dots-fill"></i>
-                            </div>
-
-                            <div>
-                                <h4>We're Ready to Help</h4>
-                                <p>
-                                    We welcome your questions and enquiries
-                                    about life at Perez Hostel.
-                                </p>
-                            </div>
-
-                        </div>
-
-
-                        <div class="contact-promise">
-
-                            <div class="promise-icon">
-                                <i class="bi bi-house-heart-fill"></i>
-                            </div>
-
-                            <div>
-                                <h4>Find Your Student Home</h4>
-                                <p>
-                                    Let us help you learn more about
-                                    our accommodation options.
-                                </p>
-                            </div>
-
-                        </div>
-
+                <div class="col-md-4">
+                    <div class="benefit-card">
+                        <i class="bi bi-house-heart"></i>
+                        <h5>Comfortable Rooms</h5>
+                        <p>Choose a room that suits your needs.</p>
                     </div>
-
                 </div>
 
-
-                <!-- RIGHT FORM -->
-                <div class="col-lg-7">
-
-                    <div class="contact-form-card">
-
-                        <div class="form-heading">
-                            <h3>Send Us a Message</h3>
-                            <p>Fill in the details below.</p>
-                        </div>
-
-                        <form id="hostelContactForm">
-
-                            <div class="row g-3">
-
-                                <div class="col-md-6">
-                                    <label for="contactName">
-                                        Full Name
-                                    </label>
-
-                                    <input
-                                        type="text"
-                                        id="contactName"
-                                        name="name"
-                                        placeholder="Enter your full name"
-                                        required>
-                                </div>
-
-
-                                <div class="col-md-6">
-                                    <label for="contactEmail">
-                                        Email Address
-                                    </label>
-
-                                    <input
-                                        type="email"
-                                        id="contactEmail"
-                                        name="email"
-                                        placeholder="Enter your email"
-                                        required>
-                                </div>
-
-
-                                <div class="col-md-6">
-                                    <label for="contactPhone">
-                                        Phone Number
-                                    </label>
-
-                                    <input
-                                        type="tel"
-                                        id="contactPhone"
-                                        name="phone"
-                                        placeholder="Enter your phone number">
-                                </div>
-                                <div class="col-12">
-                                    <label for="contactMessage">
-                                        Your Message
-                                    </label>
-
-                                    <textarea
-                                        id="contactMessage"
-                                        name="message"
-                                        rows="5"
-                                        placeholder="How can we help you?"
-                                        required></textarea>
-                                </div>
-
-
-                                <div class="col-12">
-
-                                    <button
-                                        type="submit"
-                                        class="contact-submit-btn">
-
-                                        Send Message
-                                        <i class="bi bi-send-fill"></i>
-
-                                    </button>
-
-                                </div>
-
-                            </div>
-
-                            <p class="form-note">
-                                <i class="bi bi-shield-check"></i>
-                                Please provide accurate contact information
-                                so we can respond to your enquiry.
-                            </p>
-
-                            <div id="contactFormStatus"
-                                 class="contact-form-status"
-                                 role="status"
-                                 aria-live="polite"></div>
-
-                        </form>
-
+                <div class="col-md-4">
+                    <div class="benefit-card">
+                        <i class="bi bi-shield-check"></i>
+                        <h5>Student-Friendly</h5>
+                        <p>A welcoming environment for student life.</p>
                     </div>
+                </div>
 
+                <div class="col-md-4">
+                    <div class="benefit-card">
+                        <i class="bi bi-chat-dots"></i>
+                        <h5>Booking Enquiries</h5>
+                        <p>Send your details for follow-up.</p>
+                    </div>
                 </div>
 
             </div>
-
         </div>
     </section>
-   <!-- Keep your existing hostel footer here -->
-    <!-- Copy the same footer you use on index.html -->
 
-
-    <!-- Bootstrap JavaScript -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
-
-    <!-- Your existing JavaScript -->
-    <!-- <script src="./javascript/script.js"></script> -->
- 
-<footer class="hostel-footer">
-    
+    <!-- Booking Success Message -->
     <div class="container">
-
-        <div class="row g-5">
-
-
-            <!-- =================================
-                 HOSTEL INFORMATION
-            ================================== -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="footer-brand">
-
-                    <a href="index.html">
-
-                        <img
-                            src="./images/logo.png"
-                            alt="Perez Hostel Logo">
-
-                        <span>
-                            PEREZ-HOSTEL
-                        </span>
-
-                    </a>
-
-                </div>
-
-
-                <p class="footer-description">
-
-                    A comfortable and welcoming student hostel
-                    designed to provide a safe, convenient and
-                    enjoyable environment for student life.
-
-                </p>
-
-
-                <!-- SOCIAL MEDIA -->
-
-                <div class="footer-social">
-
-                    <a href="#" aria-label="Facebook">
-                        <i class="bi bi-facebook"></i>
-                    </a>
-
-                    <a href="#" aria-label="Instagram">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-
-                    <a href="#" aria-label="WhatsApp">
-                        <i class="bi bi-whatsapp"></i>
-                    </a>
-
-                    <a href="#" aria-label="TikTok">
-                        <i class="bi bi-tiktok"></i>
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- =================================
-                 QUICK LINKS
-            ================================== -->
-
-            <div class="col-lg-2 col-md-6">
-
-                <h3 class="footer-title">
-                    Quick Links
-                </h3>
-
-                <ul class="footer-links">
-
-                    <li>
-                        <a href="index.html">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="room2_n_1.html">
-                            Twins Room
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#facilities">
-                            Facilities
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="gallery.html">
-                            Gallery
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-            <!-- =================================
-                 HOSTEL
-            ================================== -->
-
-            <div class="col-lg-2 col-md-6">
-
-                <h3 class="footer-title">
-                    Hostel
-                </h3>
-
-                <ul class="footer-links">
-
-                    <li>
-                        <a href="pricing.html">
-                            Pricing
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html">
-                            Contact Us
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-            <!-- =================================
-                 CONTACT INFORMATION
-            ================================== -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <h3 class="footer-title">
-                    Contact Us
-                </h3>
-
-
-                <div class="footer-contact">
-
-                    <div class="contact-item">
-
-                        <i class="bi bi-geo-alt-fill"></i>
-
-                        <div>
-
-                            <strong>
-                                Location
-                            </strong>
-
-                            <p>
-                                Agogo, Kumasi, Ghana
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="contact-item">
-
-                        <i class="bi bi-telephone-fill"></i>
-
-                        <div>
-
-                            <strong>
-                                Phone
-                            </strong>
-
-                            <p>
-                                +233 XX XXX XXXX
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="contact-item">
-
-                        <i class="bi bi-envelope-fill"></i>
-
-                        <div>
-
-                            <strong>
-                                Email
-                            </strong>
-
-                            <p>
-                                info@perezhostel.com
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="contact-item">
-
-                        <i class="bi bi-clock-fill"></i>
-
-                        <div>
-
-                            <strong>
-                                Office Hours
-                            </strong>
-
-                            <p>
-                                Monday - Saturday
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+        <div id="bookingSuccess"
+             class="alert alert-success text-center mt-4 d-none"
+             role="status">
+            <i class="bi bi-check-circle-fill"></i>
+            Your demo booking request has been submitted!
         </div>
-
-
-        <!-- =================================
-             FOOTER BOTTOM
-        ================================== -->
-
-        <div class="footer-bottom">
-
-            <p>
-                © 2026
-                <strong>PEREZ-HOSTEL</strong>.
-                All Rights Reserved.
-            </p>
-
-
-            <div class="footer-bottom-links">
-
-                <a href="#">
-                    Privacy Policy
-                </a>
-
-                <a href="#">
-                    Terms & Conditions
-                </a>
-
-            </div>
-
-        </div>
-
     </div>
 
-</footer>
-</footer>
-<!-- Bootstrap JavaScript
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <!-- Booking Form Popup -->
+    <div class="modal fade" id="bookingModal"
+         tabindex="-1" aria-labelledby="bookingModalTitle"
+         aria-hidden="true">
 
-    <!-- My JavaScript -->
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content booking-modal">
+
+                <div class="modal-header">
+                    <div>
+                        <span class="modal-small-title">PEREZ-HOSTEL</span>
+                        <h2 class="modal-title" id="bookingModalTitle">
+                            Book Your Room
+                        </h2>
+                        <p class="mb-0 text-muted small">
+                            Fill in your details below.
+                        </p>
+                    </div>
+
+                    <button type="button" class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <form id="bookingForm">
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+                                <label for="fullName" class="form-label">
+                                    Full Name
+                                </label>
+                                <input type="text" class="form-control"
+                                       id="fullName" name="fullName"
+                                       placeholder="Enter your full name"
+                                       required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">
+                                    Email Address
+                                </label>
+                                <input type="email" class="form-control"
+                                       id="email" name="email"
+                                       placeholder="example@email.com"
+                                       required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">
+                                    Phone Number
+                                </label>
+                                <input type="tel" class="form-control"
+                                       id="phone" name="phone"
+                                       placeholder="Enter phone number"
+                                       required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="roomType" class="form-label">
+                                    Preferred Room
+                                </label>
+                                <select class="form-select" id="roomType"
+                                        name="roomType" required>
+                                    <option value="" selected disabled>
+                                        Select a room
+                                    </option>
+                                    <option value="Single Room">
+                                        Single Room
+                                    </option>
+                                    <option value="Double Room">
+                                        Double Room
+                                    </option>
+                                    <option value="Shared Room">
+                                        Shared Room
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="checkIn" class="form-label">
+                                    Preferred Check-in Date
+                                </label>
+                                <input type="date" class="form-control"
+                                       id="checkIn" name="checkIn"
+                                       required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="duration" class="form-label">
+                                    Length of Stay
+                                </label>
+                                <select class="form-select" id="duration"
+                                        name="duration" required>
+                                    <option value="" selected disabled>
+                                        Select duration
+                                    </option>
+                                    <option value="1 month">1 month</option>
+                                    <option value="3 months">3 months</option>
+                                    <option value="6 months">6 months</option>
+                                    <option value="1 year">1 year</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="message" class="form-label">
+                                    Additional Information (Optional)
+                                </label>
+                                <textarea class="form-control" id="message"
+                                          name="message" rows="3"
+                                          placeholder="Any questions or special requests?"></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="d-flex gap-3 mt-4 flex-wrap">
+                            <button type="submit"
+                                    class="btn submit-booking-btn">
+                                Submit Booking
+                                <i class="bi bi-check-circle"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="btn cancel-booking-btn"
+                                    data-bs-dismiss="modal">
+                                Cancel
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="booking-footer">
+        <p class="mb-0">
+            &copy; 2026 PEREZ-HOSTEL. All rights reserved.
+        </p>
+    </footer>
+
+    <!-- Bootstrap JavaScript: include only once -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="./script/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

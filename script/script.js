@@ -359,3 +359,75 @@ if (contactForm) {
         status.style.color = "#0b8064";
     });
 }
+
+
+// const contactForm = document.getElementById("hostelContactForm");
+
+// if (contactForm) {
+//     contactForm.addEventListener("submit", function(event) {
+//         event.preventDefault();
+
+//         const name = document.getElementById("contactName").value.trim();
+//         const email = document.getElementById("contactEmail").value.trim();
+//         const subject = document.getElementById("contactSubject").value;
+//         const message = document.getElementById("contactMessage").value.trim();
+//         const status = document.getElementById("contactFormStatus");
+
+//         if (!name || !email || !subject || !message) {
+//             status.textContent = "Please complete all required fields.";
+//             status.style.color = "#b42318";
+//             return;
+//         }
+
+//         status.textContent =
+//             "Your form has been checked, but it has not been sent yet. Connect a form service or email backend to deliver your message.";
+
+//         status.style.color = "#0b8064";
+//     });
+// }
+
+
+const bookingForm = document.getElementById("bookingForm");
+const bookingModalElement = document.getElementById("bookingModal");
+const bookingSuccess = document.getElementById("bookingSuccess");
+
+const bookingModal = bootstrap.Modal.getOrCreateInstance(
+    bookingModalElement
+);
+
+// Prevent visitors from choosing a past check-in date.
+const checkInInput = document.getElementById("checkIn");
+const today = new Date();
+const localToday = [
+    today.getFullYear(),
+    String(today.getMonth() + 1).padStart(2, "0"),
+    String(today.getDate()).padStart(2, "0")
+].join("-");
+
+checkInInput.min = localToday;
+
+// Handle the form submission.
+bookingForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    alert("Your booking request has been received! We will contact you shortly.");
+
+    // Show the success message.
+    bookingSuccess.classList.remove("d-none");
+
+    // Close the popup.
+    bookingModal.hide();
+
+    // Clear the form after submission.
+    bookingForm.reset();
+
+    // Scroll to the success message.
+    bookingSuccess.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+});
+
+// Hide the previous success message when opening a new booking.
+bookingModalElement.addEventListener("show.bs.modal", function () {
+    bookingSuccess.classList.add("d-none");
+});
