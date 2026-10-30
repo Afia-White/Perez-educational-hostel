@@ -76,7 +76,8 @@ a {
 .hero {
     /* margin:0; */
     height:250px;
-    padding-left:500px;
+    /* text-align: center; */
+    padding-left:10;
     display: flex;
     /* text-align: center; */
     align-items: center;
@@ -382,8 +383,8 @@ a {
 
     .hero {
         height: 300px;
-        text-align: center;
-        padding-left: 0;
+        /* text-align: center; */
+        padding-left: 10;
         margin:0;
     }
 
