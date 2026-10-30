@@ -382,7 +382,7 @@ a {
 
     .hero {
         height: 300px;
-        padding: 65px 7%;
+        padding-left:100px;
         margin:0;
     }
 
