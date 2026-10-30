@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', system-ui, sans-serif;
+}
+
 /* =========================================
    PEREZ HOSTEL NAVBAR
 ========================================= */
@@ -5,7 +12,7 @@
     width: 48px;
     height: 42px;
     padding: 6px 9px;
-    border: 2px solid lightskyblue;
+    border: 2px solid white;
     border-radius: 8px;
     background-color:transparent;
     transition: 0.3s ease;
@@ -27,7 +34,7 @@
 
     background-size: 100% 100%;
 
-    filter: brightness(0) invert(1);
+    filter: invert(34%) sepia(100%) saturate(2000%) hue-rotate(207deg) brightness(96%) contrast(101%);
 }
 
 /* ======================================== 
@@ -2420,7 +2427,7 @@
         padding: 10px 0;
         z-index:999;
 
-        background-color:lightblue;
+        background-color:white;
 
     }
 
