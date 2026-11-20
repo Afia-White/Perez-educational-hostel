@@ -334,6 +334,56 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+/* =========================================
+   REUSABLE SCROLL REVEAL
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const revealItems = document.querySelectorAll(".scroll-reveal");
+
+    if (!("IntersectionObserver" in window)) {
+        revealItems.forEach(function (item) {
+            item.classList.add("is-visible");
+        });
+        return;
+    }
+
+    const revealObserver = new IntersectionObserver(
+        function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+
+                const container =
+                    entry.target.closest(".row") ||
+                    entry.target.closest(".testi__track") ||
+                    entry.target.parentElement;
+                const siblings = container
+                    ? [...container.querySelectorAll(".scroll-reveal")]
+                    : [];
+                const siblingIndex = siblings.indexOf(entry.target);
+
+                if (siblingIndex >= 0) {
+                    entry.target.style.setProperty(
+                        "--reveal-delay",
+                        `${Math.min(siblingIndex * 140, 420)}ms`
+                    );
+                }
+
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            });
+        },
+        {
+            threshold: 0.08,
+            rootMargin: "0px 0px -20px"
+        }
+    );
+
+    revealItems.forEach(function (item) {
+        revealObserver.observe(item);
+    });
+});
+
 
 const contactForm = document.getElementById("hostelContactForm");
 
@@ -387,7 +437,7 @@ if (contactForm) {
 // }
 
 
-const bookingForm = document.getElementById("bookingForm");
+// const bookingForm = document.getElementById("bookingForm");
 const bookingModalElement = document.getElementById("bookingModal");
 const bookingSuccess = document.getElementById("bookingSuccess");
 
@@ -431,3 +481,24 @@ bookingForm.addEventListener("submit", function (event) {
 bookingModalElement.addEventListener("show.bs.modal", function () {
     bookingSuccess.classList.add("d-none");
 });
+
+
+
+const bookingForm = document.getElementById("bookingForm");
+
+if (bookingForm) {
+    bookingForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        alert("Your booking form has been submitted successfully!");
+
+        bookingForm.reset();
+
+        const bookingModal = document.getElementById("bookingModal");
+        const modal = bootstrap.Modal.getInstance(bookingModal);
+
+        if (modal) {
+            modal.hide();
+        }
+    });
+}

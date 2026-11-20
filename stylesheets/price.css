@@ -1,0 +1,473 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7f9fc;
+    color: #183044;
+}
+
+/* NAVBAR */
+
+.pricing-navbar {
+    background: #0b3d5c;
+    padding: 13px 0;
+}
+
+.pricing-navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.pricing-navbar .navbar-brand img {
+    width: 43px;
+    height: 43px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.pricing-navbar .nav-link {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 12px;
+    transition: .3s;
+}
+
+.pricing-navbar .nav-link:hover,
+.pricing-navbar .nav-link.active {
+    color: #ffd166;
+}
+
+/* HERO */
+
+.pricing-hero {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    padding: 75px 0;
+    background:
+        linear-gradient(100deg,
+        rgba(5, 31, 48, .96),
+        rgba(11, 61, 92, .82)),
+        url("../images/pricing-hero.jpg") center/cover no-repeat;
+    color: white;
+}
+
+.pricing-hero-content {
+    max-width: 720px;
+}
+
+.hero-label {
+    display: inline-block;
+    color: #ffd166;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.pricing-hero h1 {
+    font-size: clamp(35px, 5vw, 58px);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.pricing-hero h1 span {
+    color: #ffd166;
+}
+
+.pricing-hero p {
+    max-width: 600px;
+    color: #e1e9ef;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.pricing-hero-btn {
+    display: inline-block;
+    background: #ffd166;
+    color: #0b3d5c;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 14px 24px;
+    border-radius: 7px;
+    transition: .3s;
+}
+
+.pricing-hero-btn:hover {
+    background: #eab843;
+    color: #0b3d5c;
+    transform: translateY(-3px);
+}
+
+/* SECTION HEADINGS */
+
+.room-pricing-section {
+    padding: 85px 0;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 48px;
+}
+
+.section-heading > span {
+    color: #d99b00;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    color: #0b3d5c;
+    font-size: 34px;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+.section-heading p {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* PRICE CARDS */
+
+.price-card {
+    height: 100%;
+    position: relative;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(11, 61, 92, .08);
+    transition: .35s ease;
+}
+
+.price-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 15px 35px rgba(11, 61, 92, .15);
+}
+
+.price-image {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.price-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.price-card:hover .price-image img {
+    transform: scale(1.08);
+}
+
+.room-label {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: #0b3d5c;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.price-content {
+    padding: 25px 23px;
+}
+
+.price-content h3 {
+    color: #0b3d5c;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.room-description {
+    min-height: 65px;
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.price {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    padding: 17px 0;
+    margin: 15px 0;
+    border-top: 1px solid #edf0f3;
+    border-bottom: 1px solid #edf0f3;
+}
+
+.price span {
+    color: #d99b00;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.price strong {
+    color: #0b3d5c;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.price small {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.price-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.price-content li {
+    color: #52616b;
+    font-size: 13px;
+    margin-bottom: 13px;
+}
+
+.price-content li i {
+    color: #d99b00;
+    margin-right: 8px;
+}
+
+.price-btn {
+    display: block;
+    text-align: center;
+    background: #0b3d5c;
+    color: white;
+    padding: 13px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.price-btn:hover {
+    background: #ffd166;
+    color: #0b3d5c;
+}
+
+/* FEATURED CARD */
+
+.featured-price {
+    border: 2px solid #ffd166;
+}
+
+.popular-label {
+    position: absolute;
+    z-index: 2;
+    top: 15px;
+    right: 15px;
+    background: #ffd166;
+    color: #0b3d5c;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+/* INCLUDED SECTION */
+
+.included-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.included-card {
+    height: 100%;
+    text-align: center;
+    padding: 30px 12px;
+    background: #f7f9fc;
+    border-radius: 12px;
+    transition: .3s;
+}
+
+.included-card:hover {
+    transform: translateY(-6px);
+    background: #fff7e5;
+}
+
+.included-card i {
+    font-size: 35px;
+    color: #d99b00;
+}
+
+.included-card h5 {
+    color: #0b3d5c;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.included-card p {
+    color: #6b7280;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.included-note {
+    color: #6b7280;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* PRICING INFORMATION */
+
+.pricing-information {
+    padding: 65px 0;
+}
+
+.information-box {
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+    padding: 35px;
+    background: white;
+    border-left: 5px solid #ffd166;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(11, 61, 92, .06);
+}
+
+.information-icon {
+    font-size: 35px;
+    color: #d99b00;
+}
+
+.information-box h3 {
+    color: #0b3d5c;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.information-box p {
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.information-box a {
+    color: #0b3d5c;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* BOOKING CTA */
+
+.pricing-cta {
+    padding: 75px 15px;
+    text-align: center;
+    background: #0b3d5c;
+    color: white;
+}
+
+.pricing-cta h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.pricing-cta p {
+    color: #e0e8ee;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.pricing-cta a {
+    display: inline-block;
+    background: #ffd166;
+    color: #0b3d5c;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 14px 25px;
+    border-radius: 7px;
+    transition: .3s;
+}
+
+.pricing-cta a:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+
+.pricing-footer {
+    background: #082e46;
+    color: white;
+    text-align: center;
+    padding: 22px 10px;
+    font-size: 12px;
+}
+
+/* RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    .pricing-hero {
+        min-height: 390px;
+        padding: 60px 0;
+    }
+
+    .pricing-hero h1 {
+        font-size: 38px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .room-pricing-section {
+        padding: 60px 0;
+    }
+
+    .information-box {
+        padding: 25px 18px;
+    }
+
+    .pricing-cta h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .pricing-hero h1 {
+        font-size: 32px;
+    }
+
+    .price-image {
+        height: 200px;
+    }
+
+    .information-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

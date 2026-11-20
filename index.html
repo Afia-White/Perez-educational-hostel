@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="stylesheets/contact.css">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/booking.css">
+    <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
     <!-- NAVBAR -->
@@ -185,47 +186,14 @@
                      PRICING DROPDOWN
                 ================================== -->
 
-                <li class="nav-item dropdown hostel-dropdown">
-
+                <li class="nav-item">
                     <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                        class="nav-link"
+                        href="room_prices.html">
                         Pricing
 
                     </a>
-
-
-                    <ul class="dropdown-menu">
-
-
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="pricing.html#rooms">
-
-                                Room Prices
-
-                            </a>
-                        </li>
-
-
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="pricing.html#payment">
-                                Payment Plans
-
-                            </a>
-                        </li>
-
-                    </ul>
-
                 </li>
-
-
                 <!-- GALLERY -->
                 <li class="nav-item">
 
@@ -278,7 +246,7 @@
     </div>
 
     <!-- Booking Form Popup -->
-    <div class="modal fade" id="bookingModal"
+    <!-- <div class="modal fade" id="bookingModal"
          tabindex="-1" aria-labelledby="bookingModalTitle"
          aria-hidden="true">
 
@@ -302,7 +270,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <form action="https://afiawhite82@gmail.com" method="POST">
+                    <form id="bookingForm" method="POST">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label for="fullName" class="form-label">
@@ -409,7 +377,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 <!-- =========================================
      HERO VIDEO
 ========================================= -->
@@ -490,7 +458,7 @@
 
     <div class="container">
 
-        <div class="intro-content">
+        <div class="intro-content scroll-reveal" data-reveal="up">
 
             <span class="intro-label">
                 ABOUT PEREZ HOSTEL
@@ -551,7 +519,7 @@
 
         <!-- SECTION HEADING -->
 
-        <div class="featured-heading">
+        <div class="featured-heading scroll-reveal" data-reveal="up">
 
             <span class="featured-label">
                 WHY PEREZ HOSTEL
@@ -583,7 +551,7 @@
 
             <div class="col-12 col-md-6 col-lg-4">
 
-                <div class="featured-card reveal-card">
+                <div class="featured-card reveal-card scroll-reveal" data-reveal="up">
 
                     <div class="featured-image">
 
@@ -631,7 +599,7 @@
 
             <div class="col-12 col-md-6 col-lg-4">
 
-                <div class="featured-card reveal-card">
+                <div class="featured-card reveal-card scroll-reveal" data-reveal="up">
 
                     <div class="featured-image">
 
@@ -678,7 +646,7 @@
 
             <div class="col-12 col-md-6 col-lg-4">
 
-                <div class="featured-card reveal-card">
+                <div class="featured-card reveal-card scroll-reveal" data-reveal="up">
 
                     <div class="featured-image">
 
@@ -737,7 +705,7 @@
 
         <!-- SECTION INTRO -->
 
-        <div class="facilities-gallery-heading">
+        <div class="facilities-gallery-heading scroll-reveal" data-reveal="up">
 
             <span>EXPERIENCE PEREZ HOSTEL</span>
 
@@ -766,7 +734,7 @@
 
             <!-- STUDY ROOM -->
 
-            <article class="facility-card facility-card-large">
+            <article class="facility-card facility-card-large scroll-reveal" data-reveal="up">
 
                 <img src="./images/library.jpg" alt="Perez Hostel study room">
 
@@ -796,7 +764,7 @@
 
             <!-- WI-FI -->
 
-            <article class="facility-card">
+            <article class="facility-card scroll-reveal" data-reveal="up">
 
                 <img
                     src="./images/wwifi.jpg"
@@ -828,7 +796,7 @@
 
             <!-- KITCHEN -->
 
-            <article class="facility-card">
+            <article class="facility-card scroll-reveal" data-reveal="up">
 
                 <img
                     src="./images/kitchen.PNG"
@@ -860,7 +828,7 @@
 
             <!-- SECURITY -->
 
-            <article class="facility-card">
+            <article class="facility-card scroll-reveal" data-reveal="up">
 
                 <img
                     src="./images/cctv.jpeg"
@@ -892,7 +860,7 @@
 
             <!-- PARKING -->
 
-            <article class="facility-card">
+            <article class="facility-card scroll-reveal" data-reveal="up">
 
                 <img
                     src="./images/facilities/parking.jpg"
@@ -924,7 +892,7 @@
 
             <!-- RECREATION -->
 
-            <article class="facility-card facility-card-wide">
+            <article class="facility-card facility-card-wide scroll-reveal" data-reveal="up">
 
                 <img
                     src="./images/facilities/recreation.jpg"
@@ -961,7 +929,7 @@
   <div class="testi__container">
 
     <!-- Header -->
-    <div class="testi__header">
+    <div class="testi__header scroll-reveal" data-reveal="up">
       <span class="testi__eyebrow">Testimonials</span>
       <h2 class="residents">
         What our
@@ -977,7 +945,7 @@
     <div class="testi__viewport">
       <div class="testi__track" id="testiTrack">
 
-        <article class="t-card">
+        <article class="t-card scroll-reveal" data-reveal="up">
           <div class="t-card__quote">"</div>
           <div class="t-card__stars">★★★★★</div>
           <p class="t-card__text">
@@ -993,7 +961,7 @@
           </div>
         </article>
 
-        <article class="t-card">
+        <article class="t-card scroll-reveal" data-reveal="up">
           <div class="t-card__quote">"</div>
           <div class="t-card__stars">★★★★★</div>
           <p class="t-card__text">
@@ -1009,7 +977,7 @@
           </div>
         </article>
 
-        <article class="t-card">
+        <article class="t-card scroll-reveal" data-reveal="up">
           <div class="t-card__quote">"</div>
           <div class="t-card__stars">★★★★★</div>
           <p class="t-card__text">
@@ -1025,7 +993,7 @@
           </div>
         </article>
 
-        <article class="t-card">
+        <article class="t-card scroll-reveal" data-reveal="up">
           <div class="t-card__quote">"</div>
           <div class="t-card__stars">★★★★★</div>
           <p class="t-card__text">
@@ -1062,7 +1030,7 @@
 
         <div class="container">
 
-            <div class="booking-banner-content">
+            <div class="booking-banner-content scroll-reveal" data-reveal="up">
 
                 <div>
                     <span>READY TO JOIN US?</span>
@@ -1104,7 +1072,7 @@
 
             <div class="col-lg-4 col-md-6">
 
-                <div class="footer-brand">
+                <div class="footer-brand scroll-reveal" data-reveal="left">
 
                     <a href="index.html">
 
@@ -1378,6 +1346,137 @@
 
 </footer>
 </footer>
+<!-- Booking Form Popup -->
+<div class="modal fade" id="bookingModal"
+     tabindex="-1" aria-labelledby="bookingModalTitle"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content booking-modal">
+
+            <div class="modal-header">
+                <div>
+                    <span class="modal-small-title">PEREZ-HOSTEL</span>
+                    <h2 class="modal-title" id="bookingModalTitle">
+                        Book Your Room
+                    </h2>
+                    <p class="mb-0 text-muted small">
+                        Fill in your details below.
+                    </p>
+                </div>
+
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <form id="bookingForm" method="POST">
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <label for="fullName" class="form-label">
+                                Full Name
+                            </label>
+                            <input type="text" class="form-control"
+                                   id="fullName" name="fullName" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">
+                                Email Address
+                            </label>
+                            <input type="email" class="form-control"
+                                   id="email" name="email" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">
+                                Phone Number
+                            </label>
+                            <input type="tel" class="form-control"
+                                   id="phone" name="phone" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="roomType" class="form-label">
+                                Preferred Room
+                            </label>
+                            <select class="form-select" id="roomType"
+                                    name="roomType" required>
+                                <option value="" selected disabled>
+                                    Select a room
+                                </option>
+                                <option value="Single Room">Single Room</option>
+                                <option value="Double Room">Double Room</option>
+                                <option value="Shared Room">Shared Room</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="checkIn" class="form-label">
+                                Preferred Check-in Date
+                            </label>
+                            <input type="date" class="form-control"
+                                   id="checkIn" name="checkIn" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="duration" class="form-label">
+                                Length of Stay
+                            </label>
+                            <select class="form-select" id="duration"
+                                    name="duration" required>
+                                <option value="" selected disabled>
+                                    Select duration
+                                </option>
+                                <option value="1 month">1 month</option>
+                                <option value="3 months">3 months</option>
+                                <option value="6 months">6 months</option>
+                                <option value="1 year">1 year</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="message" class="form-label">
+                                Additional Information
+                            </label>
+                            <textarea class="form-control" id="message"
+                                      name="message" rows="3"></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex gap-3 mt-4 flex-wrap">
+
+                        <button type="submit" class="btn submit-booking-btn">
+                            Submit Booking
+                            <i class="bi bi-check-circle"></i>
+                        </button>
+
+                        <button type="button" class="btn cancel-booking-btn"
+                                data-bs-dismiss="modal">
+                            Cancel
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Success Message -->
+<div class="container">
+    <div id="bookingSuccess"
+         class="alert alert-success text-center mt-4 d-none">
+        Your booking request has been submitted!
+    </div>
+</div>
 <!-- Bootstrap JavaScript
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
 
