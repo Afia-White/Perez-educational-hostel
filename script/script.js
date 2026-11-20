@@ -438,67 +438,112 @@ if (contactForm) {
 
 
 // const bookingForm = document.getElementById("bookingForm");
-const bookingModalElement = document.getElementById("bookingModal");
-const bookingSuccess = document.getElementById("bookingSuccess");
 
-const bookingModal = bootstrap.Modal.getOrCreateInstance(
-    bookingModalElement
-);
+document.addEventListener("DOMContentLoaded", function () {
 
-// Prevent visitors from choosing a past check-in date.
-const checkInInput = document.getElementById("checkIn");
-const today = new Date();
-const localToday = [
-    today.getFullYear(),
-    String(today.getMonth() + 1).padStart(2, "0"),
-    String(today.getDate()).padStart(2, "0")
-].join("-");
+    const bookingModal = document.getElementById("bookingModal");
+    const openBooking = document.getElementById("openBooking");
+    const closeBooking = document.getElementById("closeBooking");
 
-checkInInput.min = localToday;
+    const bookingForm = document.getElementById("bookingForm");
+    const bookingSuccess = document.getElementById("bookingSuccess");
 
-// Handle the form submission.
-bookingForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-    alert("Your booking request has been received! We will contact you shortly.");
+    // Check that all important elements exist
+    if (!bookingModal || !openBooking || !closeBooking ||
+        !bookingForm || !bookingSuccess) {
 
-    // Show the success message.
-    bookingSuccess.classList.remove("d-none");
+        console.error("Booking elements could not be found.");
+        return;
+    }
 
-    // Close the popup.
-    bookingModal.hide();
-
-    // Clear the form after submission.
-    bookingForm.reset();
-
-    // Scroll to the success message.
-    bookingSuccess.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
+    // OPEN THE FORM
+    openBooking.addEventListener("click", function () {
+        bookingModal.classList.add("active");
     });
-});
 
-// Hide the previous success message when opening a new booking.
-bookingModalElement.addEventListener("show.bs.modal", function () {
-    bookingSuccess.classList.add("d-none");
-});
+    // CLOSE THE FORM
+    function closeModal() {
+        bookingModal.classList.remove("active");
+    }
 
+    closeBooking.addEventListener("click", closeModal);
 
-
-const bookingForm = document.getElementById("bookingForm");
-
-if (bookingForm) {
-    bookingForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        alert("Your booking form has been submitted successfully!");
-
-        bookingForm.reset();
-
-        const bookingModal = document.getElementById("bookingModal");
-        const modal = bootstrap.Modal.getInstance(bookingModal);
-
-        if (modal) {
-            modal.hide();
+    // CLOSE WHEN BACKGROUND IS CLICKED
+    bookingModal.addEventListener("click", function (event) {
+        if (event.target === bookingModal) {
+            closeModal();
         }
     });
-}
+
+    // CLOSE WITH ESCAPE KEY
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            closeModal();
+        }
+    });
+
+    // SUBMIT THE FORM
+    bookingForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        // Hide the form
+        bookingForm.style.display = "none";
+
+        // Show the success message
+        bookingSuccess.style.display = "block";
+
+        // Close the popup after 3 seconds
+        setTimeout(function () {
+
+            closeModal();
+
+            // Reset everything for the next booking
+            bookingForm.reset();
+            bookingForm.style.display = "block";
+            bookingSuccess.style.display = "none";
+
+        }, 3000);
+
+    });
+
+});
+// document.addEventListener("DOMContentLoaded", function () {
+
+//     const bookingForm = document.getElementById("bookingForm");
+//     const bookingModalElement = document.getElementById("bookingModal");
+//     const bookingSuccess = document.getElementById("bookingSuccess");
+
+//     bookingForm.addEventListener("submit", function (event) {
+
+//         event.preventDefault();
+
+//         // Hide the booking form
+//         bookingForm.style.display = "none";
+
+//         // Show the success message
+//         bookingSuccess.classList.remove("d-none");
+
+//         // Close the popup after 2 seconds
+//         setTimeout(function () {
+
+//             const modal = bootstrap.Modal.getInstance(bookingModalElement);
+
+//             if (modal) {
+//                 modal.hide();
+//             }
+
+//         }, 2000);
+
+//     });
+
+// });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const form = document.getElementById("bookingForm");
+//   console.log("Booking form found:", form);
+//   form.addEventListener("submit", function(event) {
+//     event.preventDefault();
+//     alert("JavaScript is working! The form submission has been stopped.");
+//   });
+// });
