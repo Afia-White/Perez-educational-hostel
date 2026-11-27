@@ -385,32 +385,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-const contactForm = document.getElementById("hostelContactForm");
-
-if (contactForm) {
-    contactForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        const name = document.getElementById("contactName").value.trim();
-        const email = document.getElementById("contactEmail").value.trim();
-        const subject = document.getElementById("contactSubject").value;
-        const message = document.getElementById("contactMessage").value.trim();
-        const status = document.getElementById("contactFormStatus");
-
-        if (!name || !email || !subject || !message) {
-            status.textContent = "Please complete all required fields.";
-            status.style.color = "#b42318";
-            return;
-        }
-
-        status.textContent =
-            "Your form has been checked, but it has not been sent yet. Connect a form service or email backend to deliver your message.";
-
-        status.style.color = "#0b8064";
-    });
-}
-
-
 // const contactForm = document.getElementById("hostelContactForm");
 
 // if (contactForm) {
@@ -437,77 +411,103 @@ if (contactForm) {
 // }
 
 
-// const bookingForm = document.getElementById("bookingForm");
+// // const contactForm = document.getElementById("hostelContactForm");
 
-document.addEventListener("DOMContentLoaded", function () {
+// // if (contactForm) {
+// //     contactForm.addEventListener("submit", function(event) {
+// //         event.preventDefault();
 
-    const bookingModal = document.getElementById("bookingModal");
-    const openBooking = document.getElementById("openBooking");
-    const closeBooking = document.getElementById("closeBooking");
+// //         const name = document.getElementById("contactName").value.trim();
+// //         const email = document.getElementById("contactEmail").value.trim();
+// //         const subject = document.getElementById("contactSubject").value;
+// //         const message = document.getElementById("contactMessage").value.trim();
+// //         const status = document.getElementById("contactFormStatus");
 
-    const bookingForm = document.getElementById("bookingForm");
-    const bookingSuccess = document.getElementById("bookingSuccess");
+// //         if (!name || !email || !subject || !message) {
+// //             status.textContent = "Please complete all required fields.";
+// //             status.style.color = "#b42318";
+// //             return;
+// //         }
 
-    // Check that all important elements exist
-    if (!bookingModal || !openBooking || !closeBooking ||
-        !bookingForm || !bookingSuccess) {
+// //         status.textContent =
+// //             "Your form has been checked, but it has not been sent yet. Connect a form service or email backend to deliver your message.";
 
-        console.error("Booking elements could not be found.");
-        return;
-    }
+// //         status.style.color = "#0b8064";
+// //     });
+// // }
 
-    // OPEN THE FORM
-    openBooking.addEventListener("click", function () {
-        bookingModal.classList.add("active");
-    });
 
-    // CLOSE THE FORM
-    function closeModal() {
-        bookingModal.classList.remove("active");
-    }
+// // const bookingForm = document.getElementById("bookingForm");
 
-    closeBooking.addEventListener("click", closeModal);
+// document.addEventListener("DOMContentLoaded", function () {
 
-    // CLOSE WHEN BACKGROUND IS CLICKED
-    bookingModal.addEventListener("click", function (event) {
-        if (event.target === bookingModal) {
-            closeModal();
-        }
-    });
+//     const bookingModal = document.getElementById("bookingModal");
+//     const openBooking = document.getElementById("openBooking");
+//     const closeBooking = document.getElementById("closeBooking");
 
-    // CLOSE WITH ESCAPE KEY
-    document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
-            closeModal();
-        }
-    });
+//     const bookingForm = document.getElementById("bookingForm");
+//     const bookingSuccess = document.getElementById("bookingSuccess");
 
-    // SUBMIT THE FORM
-    bookingForm.addEventListener("submit", function (event) {
+//     // Check that all important elements exist
+//     if (!bookingModal || !openBooking || !closeBooking ||
+//         !bookingForm || !bookingSuccess) {
 
-        event.preventDefault();
+//         console.error("Booking elements could not be found.");
+//         return;
+//     }
 
-        // Hide the form
-        bookingForm.style.display = "none";
+//     // OPEN THE FORM
+//     openBooking.addEventListener("click", function () {
+//         bookingModal.classList.add("active");
+//     });
 
-        // Show the success message
-        bookingSuccess.style.display = "block";
+//     // CLOSE THE FORM
+//     function closeModal() {
+//         bookingModal.classList.remove("active");
+//     }
 
-        // Close the popup after 3 seconds
-        setTimeout(function () {
+//     closeBooking.addEventListener("click", closeModal);
 
-            closeModal();
+//     // CLOSE WHEN BACKGROUND IS CLICKED
+//     bookingModal.addEventListener("click", function (event) {
+//         if (event.target === bookingModal) {
+//             closeModal();
+//         }
+//     });
 
-            // Reset everything for the next booking
-            bookingForm.reset();
-            bookingForm.style.display = "block";
-            bookingSuccess.style.display = "none";
+//     // CLOSE WITH ESCAPE KEY
+//     document.addEventListener("keydown", function (event) {
+//         if (event.key === "Escape") {
+//             closeModal();
+//         }
+//     });
 
-        }, 3000);
+//     // SUBMIT THE FORM
+//     bookingForm.addEventListener("submit", function (event) {
 
-    });
+//         event.preventDefault();
 
-});
+//         // Hide the form
+//         bookingForm.style.display = "none";
+
+//         // Show the success message
+//         bookingSuccess.style.display = "block";
+
+//         // Close the popup after 3 seconds
+//         setTimeout(function () {
+
+//             closeModal();
+
+//             // Reset everything for the next booking
+//             bookingForm.reset();
+//             bookingForm.style.display = "block";
+//             bookingSuccess.style.display = "none";
+
+//         }, 3000);
+
+//     });
+
+// });
 // document.addEventListener("DOMContentLoaded", function () {
 
 //     const bookingForm = document.getElementById("bookingForm");
@@ -547,3 +547,42 @@ document.addEventListener("DOMContentLoaded", function () {
 //     alert("JavaScript is working! The form submission has been stopped.");
 //   });
 // });
+
+const book = document.getElementById("bookNowBtn");
+const bookingModal = document.getElementById("bookingModal");
+const bookingForm = document.getElementById("bookingForm");
+const bookingSuccess = document.getElementById("bookingSuccess");
+
+
+// Create the Bootstrap popup
+const bookingPopUp = new bootstrap.Modal(bookingModal);
+
+
+// When the user clicks Book Now
+book.addEventListener("click", function () {
+
+    // Hide the previous success message
+    bookingSuccess.classList.add("d-none");
+
+    // Show the booking form
+    bookingPopUp.show();
+
+});
+
+
+// When the user submits the booking form
+bookingForm.addEventListener("submit", function (event) {
+
+    // Prevent the page from refreshing
+    event.preventDefault();
+
+    // Show the success message
+    alert("Your booking request has been submitted successfully!");
+
+    // Close the booking popup
+    bookingPopUp.hide();
+
+    // Clear all the form inputs
+    bookingForm.reset();
+
+});

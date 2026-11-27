@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="stylesheets/contact.css">
     <link rel="stylesheet" href="stylesheets/booking.css">
     <script>document.documentElement.classList.add("js");</script>
+    <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
     <!-- NAVBAR -->
@@ -242,14 +243,9 @@
                 </li>
 
                 <!-- BOOK NOW -->
-                <li class="nav-item ms-lg-3">
-                    <button type="button"
-                        class="btn book-now-btn"
-                        data-bs-toggle="modal"
-                        data-bs-target="#bookingModal">
-                        Book Now 
-                    </button>
-                </li>
+                <button type="button" class="booking-btn" id="bookNowBtn">
+                    Book Now
+                </button>
             </ul>
 
         </div>
@@ -946,72 +942,245 @@
             Your booking request has been submitted.
         </div>
     </div>
+<!-- Booking Form Popup -->
+<div class="container">
+    <div id="bookingSuccess" class="alert alert-success text-center d-none" role="status">
+        <i class="bi bi-check-circle-fill"></i>
 
-    <!-- Booking Form Popup -->
-    
-<!-- BOOK NOW BUTTON -->
-<!-- <button type="button" class="btn book-now-btn" id="openBooking">
-    Book Now
-</button> -->
+    </div>
 
-<!-- BOOKING MODAL -->
-<div class="booking-overlay" id="bookingModal">
+</div>
+<div class="modal fade"
+         id="bookingModal"
+         tabindex="-1"
+         aria-labelledby="bookingModalTitle"
+         aria-hidden="true">
 
-    <div class="booking-modal">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
 
-        <button type="button" class="close-booking" id="closeBooking">
-            &times;
-        </button>
+            <div class="modal-content booking-modal">
 
-        <h2>Book Your Room</h2>
-        <p>Fill in your details below.</p>
+                <!-- Modal Header -->
+                <div class="modal-header">
 
-        <form id="bookingForm">
+                    <div>
+                        <span class="modal-small-title">
+                            PEREZ-HOSTEL
+                        </span>
 
-            <label for="fullName">Full Name</label>
-            <input type="text" id="fullName" name="fullName" required>
+                        <h2 class="modal-title" id="bookingModalTitle">
+                            Book Your Room
+                        </h2>
 
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
+                        <p class="mb-0 small">
+                            Fill in your details below.
+                        </p>
+                    </div>
 
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required>
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close">
+                    </button>
 
-            <label for="roomType">Preferred Room</label>
-            <select id="roomType" name="roomType" required>
-                <option value="">Select a room</option>
-                <option value="Single Room">Single Room</option>
-                <option value="Double Room">Double Room</option>
-                <option value="Shared Room">Shared Room</option>
-            </select>
+                </div>
 
-            <label for="checkIn">Check-in Date</label>
-            <input type="date" id="checkIn" name="checkIn" required>
+                <!-- Modal Body -->
+                <div class="modal-body p-4">
 
-            <label for="duration">Length of Stay</label>
-            <select id="duration" name="duration" required>
-                <option value="">Select duration</option>
-                <option value="1 month">1 month</option>
-                <option value="3 months">3 months</option>
-                <option value="6 months">6 months</option>
-                <option value="1 year">1 year</option>
-            </select>
+                    <form id="bookingForm">
 
-            <label for="message">Additional Information</label>
-            <textarea id="message" name="message"></textarea>
+                        <div class="row g-3">
 
-            <button type="submit" class="submit-booking-btn">
-                Submit Booking
-            </button>
+                            <!-- Full Name -->
+                            <div class="col-md-6">
 
-        </form>
-        <div id="bookingSuccess" style="display: none;">
-            <h3>Booking Request Received!</h3>
-            <p>Thank you for choosing Perez Hostel.</p>
-        </div>
+                                <label for="fullName" class="form-label">
+                                    Full Name
+                                </label>
+
+                                <input type="text"
+                                       class="form-control"
+                                       id="fullName"
+                                       name="fullName"
+                                       placeholder="Enter your full name"
+                                       required>
+
+                            </div>
+
+                            <!-- Email -->
+                            <div class="col-md-6">
+
+                                <label for="email" class="form-label">
+                                    Email Address
+                                </label>
+
+                                <input type="email"
+                                       class="form-control"
+                                       id="email"
+                                       name="email"
+                                       placeholder="example@email.com"
+                                       required>
+
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="col-md-6">
+
+                                <label for="phone" class="form-label">
+                                    Phone Number
+                                </label>
+
+                                <input type="tel"
+                                       class="form-control"
+                                       id="phone"
+                                       name="phone"
+                                       placeholder="Enter phone number"
+                                       required>
+
+                            </div>
+
+                            <!-- Room Type -->
+                            <div class="col-md-6">
+
+                                <label for="roomType" class="form-label">
+                                    Preferred Room
+                                </label>
+
+                                <select class="form-select"
+                                        id="roomType"
+                                        name="roomType"
+                                        required>
+
+                                    <option value="" selected disabled>
+                                        Select a room
+                                    </option>
+
+                                    <option value="Single Room">
+                                        Single Room
+                                    </option>
+
+                                    <option value="Double Room">
+                                        Double Room
+                                    </option>
+
+                                    <option value="Shared Room">
+                                        Shared Room
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <!-- Check-in Date -->
+                            <div class="col-md-6">
+
+                                <label for="checkIn" class="form-label">
+                                    Check-in Date
+                                </label>
+
+                                <input type="date"
+                                       class="form-control"
+                                       id="checkIn"
+                                       name="checkIn"
+                                       required>
+
+                            </div>
+
+                            <!-- Duration -->
+                            <div class="col-md-6">
+
+                                <label for="duration" class="form-label">
+                                    Length of Stay
+                                </label>
+
+                                <select class="form-select"
+                                        id="duration"
+                                        name="duration"
+                                        required>
+
+                                    <option value="" selected disabled>
+                                        Select duration
+                                    </option>
+
+                                    <option value="1 month">
+                                        1 month
+                                    </option>
+
+                                    <option value="3 months">
+                                        3 months
+                                    </option>
+
+                                    <option value="6 months">
+                                        6 months
+                                    </option>
+
+                                    <option value="1 year">
+                                        1 year
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <!-- Additional Information -->
+                            <div class="col-12">
+
+                                <label for="message" class="form-label">
+                                    Additional Information (Optional)
+                                </label>
+
+                                <textarea class="form-control"
+                                          id="message"
+                                          name="message"
+                                          rows="3"
+                                          placeholder="Any questions or special requests?"></textarea>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="d-flex gap-3 mt-4 flex-wrap">
+
+                            <button type="submit"
+                                    class="btn submit-booking-btn">
+
+                                Submit Booking
+                                <i class="bi bi-check-circle"></i>
+
+                            </button>
+
+                            <button type="button"
+                                    class="btn cancel-booking-btn"
+                                    data-bs-dismiss="modal">
+
+                                Cancel
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
     </div>
 </div>
 <script src="script/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<a href="https://wa.me/233XXXXXXXXX"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat with us on WhatsApp">
+
+    <i class="bi bi-whatsapp"></i>
+
+    <span class="whatsapp-text">Chat with us</span>
+
+</a>
 </body>
 </html>
